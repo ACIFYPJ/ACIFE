@@ -12,9 +12,9 @@ namespace DataAccessLayer.E.Events
 {
     public class EventsDAL
     {
+        string constr = Properties.Settings.Default.DBconnect;
         public DataTable GetData()
         {
-            string constr = Properties.Settings.Default.DBconnect;
 
             using (SqlConnection con = new SqlConnection(constr))
             {
@@ -33,5 +33,22 @@ namespace DataAccessLayer.E.Events
                 }
             }
         }
+        public DataTable getDetails(int eventID)
+        {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT EventTitle, EventStart, Location, Description FROM aci_event WHERE EventID = @eventID",con))
+                {
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@eventID", eventID);
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd;
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+        }
     }
+
 }
