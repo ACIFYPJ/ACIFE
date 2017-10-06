@@ -65,6 +65,7 @@
     <Content Include="AllPages\A.Courses\C_CoursesDetailed.aspx" />
     <Content Include="AllPages\E.Events\A_Events.aspx" />
     <Content Include="AllPages\E.Events\B_EventForm.aspx" />
+    <Content Include="AllPages\E.Events\C_EventDetails.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="AllPages\E.Events\B_EventForm.aspx.designer.cs">
       <DependentUpon>B_EventForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\E.Events\C_EventDetails.aspx.cs">
+      <DependentUpon>C_EventDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\E.Events\C_EventDetails.aspx.designer.cs">
+      <DependentUpon>C_EventDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
