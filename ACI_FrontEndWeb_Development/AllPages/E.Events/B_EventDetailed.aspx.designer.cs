@@ -10,15 +10,6 @@
 namespace ACI_FrontEndWeb_Development.AllPages.E.Events {
     
     
-    public partial class A_Events {
-        
-        /// <summary>
-        /// EventRPT control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater EventRPT;
+    public partial class B_EventDetailed {
     }
 }
