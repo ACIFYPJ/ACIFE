@@ -13,17 +13,34 @@ namespace DataAccessLayer.E.Events
 {
     public class EventsDAL
     {
-
-
         public SqlConnection GetConnection()
         {
             SqlConnection dbConn;
-            string constr = Properties.Settings.Default.DBconnect;
+            String connString = Properties.Settings.Default.DBconnect;
 
-            dbConn = new SqlConnection(constr);
+            dbConn = new SqlConnection(connString);
 
             return dbConn;
         }
+
+
+        public DataTable getDetails(int eventID)
+        {
+            using (SqlConnection con = GetConnection())
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT EventTitle, EventStart, Location, Description FROM aci_event WHERE EventID = @eventID", con))
+                {
+                    con.Open();
+                    cmd.Parameters.AddWithValue("@eventID", eventID);
+                    SqlDataAdapter sda = new SqlDataAdapter();
+                    sda.SelectCommand = cmd;
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    return dt;
+                }
+            }
+        }
+
 
         public DataTable GetData()
         {
@@ -78,11 +95,11 @@ namespace DataAccessLayer.E.Events
                 sqlCmd.Parameters.AddWithValue("@RegistrationDate", RegistrationDate);
                 sqlCmd.Parameters.AddWithValue("@AgreeTermsConditions", TnC);
                 result = sqlCmd.ExecuteNonQuery();
-            }
+                    }
             catch (Exception e)
             {
                 ex = e.Message;
-            }
+                }
             finally
             {
                 conn.Close();
@@ -90,8 +107,6 @@ namespace DataAccessLayer.E.Events
             
             return result;
         }
-
-
-
     }
+
 }
