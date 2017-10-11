@@ -102,7 +102,7 @@
     <Content Include="AllPages\A.Courses\C_CoursesDetailed.aspx" />
     <Content Include="AllPages\E.Events\A_Events.aspx" />
     <Content Include="AllPages\E.Events\B_EventDetailed.aspx" />
-    <Content Include="AllPages\E.Events\B_EventForm.aspx" />
+    <Content Include="AllPages\E.Events\C_EventForm.aspx" />
     <Content Include="css\TableCss.css" />
     <Content Include="fonts\lato-bold-webfont.eot" />
     <Content Include="fonts\lato-bold-webfont.ttf" />
@@ -312,12 +312,12 @@
     <Compile Include="AllPages\E.Events\B_EventDetailed.aspx.designer.cs">
       <DependentUpon>B_EventDetailed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventForm.aspx.cs">
-      <DependentUpon>B_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.Events\C_EventForm.aspx.cs">
+      <DependentUpon>C_EventForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventForm.aspx.designer.cs">
-      <DependentUpon>B_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.Events\C_EventForm.aspx.designer.cs">
+      <DependentUpon>C_EventForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Global.asax.cs">

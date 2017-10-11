@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AllMasterPages/PublicMasterPage.Master" AutoEventWireup="true" CodeBehind="B_EventForm.aspx.cs" Inherits="ACI_FrontEndWeb_Development.AllPages.E.Events.B_EventForm" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AllMasterPages/PublicMasterPage.Master" AutoEventWireup="true" CodeBehind="C_EventForm.aspx.cs" Inherits="ACI_FrontEndWeb_Development.AllPages.E.Events.B_EventForm" %>
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
