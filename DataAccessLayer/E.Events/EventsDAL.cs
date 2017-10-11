@@ -37,7 +37,7 @@ namespace DataAccessLayer.E.Events
         {
             using (SqlConnection con = new SqlConnection(constr))
             {
-                using (SqlCommand cmd = new SqlCommand("SELECT EventTitle, EventStart, Location, Description FROM aci_event WHERE EventID = @eventID",con))
+                using (SqlCommand cmd = new SqlCommand("SELECT EventTitle, EventStart, Location, Description, Photo FROM aci_event WHERE EventID = @eventID",con))
                 {
                     con.Open();
                     cmd.Parameters.AddWithValue("@eventID", eventID);

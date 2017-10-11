@@ -15,6 +15,7 @@
         <li><a href="#">Events</a></li>
         <li class="active">Details</li>
     </ul>
+    <asp:Image ID="imgResult" runat="server" />
     <h1 runat="server" id="eventTitle" />
     <h3 runat="server" id="dateTitle">Event Date</h3>
     <p runat="server" id="date" />
@@ -22,4 +23,5 @@
     <p runat="server" id="location" />
     <h3 runat="server" id="descriptionTitle">Description</h3>
     <p runat="server" id="description" />
+    <asp:Button ID="signup" runat="server" Text="Sign up" OnClick="signup_Click" />
 </asp:Content>
