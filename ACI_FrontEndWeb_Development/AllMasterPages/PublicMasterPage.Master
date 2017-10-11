@@ -63,53 +63,56 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNav">
                     <ul class="nav navbar-nav">
-                        <li><a href="Home.aspx">Home</a></li>
-                        <li><a href="Events.aspx">Events</a></li>
+                        <li><a href="/HomePage.aspx">Home</a></li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+                            <a href="/Allpages/E.Events/A_Events.aspx">Events</a>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="/Allpages/G.AboutUs/A_AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="AboutUs.aspx">Our vision, Mission, Values</a></li>
-                                <li><a href="AboutUs.aspx">Facilities</a></li>
-                                <li><a href="AboutUs.aspx">ACI distinguished chefs advisory panel</a></li>
-                                <li><a href="AboutUs.aspx">Our partnets</a></li>
-                                <li><a href="AboutUs.aspx">FAQs</a></li>
+                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Our vision, Mission, Values</a></li>
+                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Facilities</a></li>
+                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">ACI distinguished chefs advisory panel</a></li>
+                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Our partnets</a></li>
+                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">FAQs</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
+                            <a href="/Allpages/A.Courses/A_Courses.aspx" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="Courses.aspx">Full Qualification</a></li>
-                                <li><a href="Courses.aspx">Short</a></li>
-                                <li><a href="Courses.aspx">Customised Courses</a></li>
+                                <li><a href="/Allpages/A.Courses/B_CoursesFull.aspx">Full Qualification</a></li>
+                                <li><a href="/Allpages/A.Courses/B_CoursesShort.aspx">Short</a></li>
+                                <li><a href="/Allpages/A.Courses/B_CoursesCustomised.aspx">Customised Courses</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training<span class="caret"></span></a>
+                            <a href="/Allpages/C.Training/A_Training.aspx" class="dropdown-toggle" data-toggle="dropdown">Training<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="Training.aspx">Assessment-Only Pathway</a></li>
+                                <li><a href="/Allpages/C.Training/A_Training.aspx">Assessment-Only Pathway</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services<span class="caret"></span></a>
+                            <a href="/Allpages/D.Services/A_Services.aspx" class="dropdown-toggle" data-toggle="dropdown">Services<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="Services.aspx">Career services</a></li>
-                                <li><a href="Services.aspx">Project & Consultancy services</a></li>
-                                <li><a href="Services.aspx">Job vacancies listing</a></li>
+                                <li><a href="/Allpages/D.Services/A_Services.aspx">Career services</a></li>
+                                <li><a href="/Allpages/D.Services/A_Services.aspx">Project & Consultancy services</a></li>
+                                <li><a href="/Allpages/D.Services/A_Services.aspx">Job vacancies listing</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Admission<span class="caret"></span></a>
+                            <a href="/Allpages/F.Admission/A_Admission.aspx" class="dropdown-toggle" data-toggle="dropdown">Admission<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="Admission.aspx">Online registeration</a></li>
+                                <li><a href="/Allpages/F.Admission/A_Admission.aspx">Online registeration</a></li>
 
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media<span class="caret"></span></a>
+                            <a href="/Allpages/B.Media/A_Media.aspx" class="dropdown-toggle" data-toggle="dropdown">Media<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="Media.aspx">Photo gallery</a></li>
-                                <li><a href="Media.aspx">Videos</a></li>
-                                <li><a href="Media.aspx">Press Releases</a></li>
+                                <li><a href="/Allpages/B.Media/A_Media.aspx">Photo gallery</a></li>
+                                <li><a href="/Allpages/B.Media/A_Media.aspx">Videos</a></li>
+                                <li><a href="/Allpages/B.Media/A_Media.aspx">Press Releases</a></li>
                             </ul>
                         </li>
 
@@ -117,6 +120,7 @@
                 </div>
             </div>
         </nav>
+        <br />
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
