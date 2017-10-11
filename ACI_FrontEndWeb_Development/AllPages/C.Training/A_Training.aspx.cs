@@ -11,7 +11,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.C.Training
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            int hellopete;
         }
     }
 }

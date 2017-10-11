@@ -107,7 +107,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.Events
             }
             if (chkNewspaper.Checked)
             {
-                ReferralSource += "Newspaper";
+                ReferralSource += "Newspaper;";
             }
             if (chkWordOfMouth.Checked)
             {
