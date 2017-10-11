@@ -100,9 +100,15 @@
     <Content Include="AllPages\A.Courses\B_CoursesFull.aspx" />
     <Content Include="AllPages\A.Courses\B_CoursesShort.aspx" />
     <Content Include="AllPages\A.Courses\C_CoursesDetailed.aspx" />
+    <Content Include="AllPages\B.Media\A_Media.aspx" />
+    <Content Include="AllPages\C.Training\A_Training.aspx" />
+    <Content Include="AllPages\D.Services\A_Services.aspx" />
     <Content Include="AllPages\E.Events\A_Events.aspx" />
     <Content Include="AllPages\E.Events\B_EventDetailed.aspx" />
-    <Content Include="AllPages\E.Events\C_EventForm.aspx" />
+    <Content Include="AllPages\E.Events\B_EventForm.aspx" />
+    <Content Include="AllPages\F.Admission\A_Admission.aspx" />
+    <Content Include="AllPages\F.Admission\B_AdmissionForm.aspx" />
+    <Content Include="AllPages\G.AboutUs\A_AboutUs.aspx" />
     <Content Include="css\TableCss.css" />
     <Content Include="fonts\lato-bold-webfont.eot" />
     <Content Include="fonts\lato-bold-webfont.ttf" />
@@ -298,6 +304,27 @@
     <Compile Include="AllPages\A.Courses\C_CoursesDetailed.aspx.designer.cs">
       <DependentUpon>C_CoursesDetailed.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AllPages\B.Media\A_Media.aspx.cs">
+      <DependentUpon>A_Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\B.Media\A_Media.aspx.designer.cs">
+      <DependentUpon>A_Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\C.Training\A_Training.aspx.cs">
+      <DependentUpon>A_Training.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\C.Training\A_Training.aspx.designer.cs">
+      <DependentUpon>A_Training.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\D.Services\A_Services.aspx.cs">
+      <DependentUpon>A_Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\D.Services\A_Services.aspx.designer.cs">
+      <DependentUpon>A_Services.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AllPages\E.Events\A_Events.aspx.cs">
       <DependentUpon>A_Events.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -312,12 +339,33 @@
     <Compile Include="AllPages\E.Events\B_EventDetailed.aspx.designer.cs">
       <DependentUpon>B_EventDetailed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\E.Events\C_EventForm.aspx.cs">
-      <DependentUpon>C_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.Events\B_EventForm.aspx.cs">
+      <DependentUpon>B_EventForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\E.Events\C_EventForm.aspx.designer.cs">
-      <DependentUpon>C_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.Events\B_EventForm.aspx.designer.cs">
+      <DependentUpon>B_EventForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\F.Admission\A_Admission.aspx.cs">
+      <DependentUpon>A_Admission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\F.Admission\A_Admission.aspx.designer.cs">
+      <DependentUpon>A_Admission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\F.Admission\B_AdmissionForm.aspx.cs">
+      <DependentUpon>B_AdmissionForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\F.Admission\B_AdmissionForm.aspx.designer.cs">
+      <DependentUpon>B_AdmissionForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\G.AboutUs\A_AboutUs.aspx.cs">
+      <DependentUpon>A_AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\G.AboutUs\A_AboutUs.aspx.designer.cs">
+      <DependentUpon>A_AboutUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Global.asax.cs">
@@ -342,12 +390,7 @@
       <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AllPages\C.Training\" />
-    <Folder Include="AllPages\D.Services\" />
-    <Folder Include="AllPages\F.Admission\" />
-    <Folder Include="AllPages\G.AboutUs\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
