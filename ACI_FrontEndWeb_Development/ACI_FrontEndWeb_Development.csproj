@@ -29,6 +29,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -95,20 +97,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AllMasterPages\PublicMasterPage.Master" />
-    <Content Include="AllPages\A.Courses\A_Courses.aspx" />
-    <Content Include="AllPages\A.Courses\B_CoursesCustomised.aspx" />
-    <Content Include="AllPages\A.Courses\B_CoursesFull.aspx" />
-    <Content Include="AllPages\A.Courses\B_CoursesShort.aspx" />
-    <Content Include="AllPages\A.Courses\C_CoursesDetailed.aspx" />
-    <Content Include="AllPages\B.Media\A_Media.aspx" />
-    <Content Include="AllPages\C.Training\A_Training.aspx" />
-    <Content Include="AllPages\D.Services\A_Services.aspx" />
-    <Content Include="AllPages\E.Events\A_Events.aspx" />
-    <Content Include="AllPages\E.Events\B_EventDetailed.aspx" />
-    <Content Include="AllPages\E.Events\B_EventForm.aspx" />
-    <Content Include="AllPages\F.Admission\A_Admission.aspx" />
-    <Content Include="AllPages\F.Admission\B_AdmissionForm.aspx" />
-    <Content Include="AllPages\G.AboutUs\A_AboutUs.aspx" />
+    <Content Include="AllPages\A.CoursesFolder\Courses.aspx" />
+    <Content Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx" />
+    <Content Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx" />
+    <Content Include="AllPages\A.CoursesFolder\CoursesFull.aspx" />
+    <Content Include="AllPages\A.CoursesFolder\CoursesShort.aspx" />
+    <Content Include="AllPages\B.MediaFolder\MediaPage.aspx" />
+    <Content Include="AllPages\C.TrainingFolder\Training.aspx" />
+    <Content Include="AllPages\D.ServicesFolder\ServicesPage.aspx" />
+    <Content Include="AllPages\E.EventsFolder\Events.aspx" />
+    <Content Include="AllPages\E.EventsFolder\EventsDetailed.aspx" />
+    <Content Include="AllPages\E.EventsFolder\EventsForm.aspx" />
+    <Content Include="AllPages\F.AdmissionsFolder\Admissions.aspx" />
+    <Content Include="AllPages\F.AdmissionsFolder\AdmissionsForm.aspx" />
+    <Content Include="AllPages\G.AboutUsFolder\AboutUs.aspx" />
     <Content Include="css\TableCss.css" />
     <Content Include="fonts\lato-bold-webfont.eot" />
     <Content Include="fonts\lato-bold-webfont.ttf" />
@@ -269,103 +271,103 @@
     <Compile Include="AllMasterPages\PublicMasterPage.Master.designer.cs">
       <DependentUpon>PublicMasterPage.Master</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.Courses\A_Courses.aspx.cs">
-      <DependentUpon>A_Courses.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\Courses.aspx.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\A.Courses\A_Courses.aspx.designer.cs">
-      <DependentUpon>A_Courses.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\Courses.aspx.designer.cs">
+      <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesCustomised.aspx.cs">
-      <DependentUpon>B_CoursesCustomised.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx.cs">
+      <DependentUpon>CoursesCustomised.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesCustomised.aspx.designer.cs">
-      <DependentUpon>B_CoursesCustomised.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx.designer.cs">
+      <DependentUpon>CoursesCustomised.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesFull.aspx.cs">
-      <DependentUpon>B_CoursesFull.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx.cs">
+      <DependentUpon>CoursesDetailed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesFull.aspx.designer.cs">
-      <DependentUpon>B_CoursesFull.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx.designer.cs">
+      <DependentUpon>CoursesDetailed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesShort.aspx.cs">
-      <DependentUpon>B_CoursesShort.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesFull.aspx.cs">
+      <DependentUpon>CoursesFull.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\A.Courses\B_CoursesShort.aspx.designer.cs">
-      <DependentUpon>B_CoursesShort.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesFull.aspx.designer.cs">
+      <DependentUpon>CoursesFull.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.Courses\C_CoursesDetailed.aspx.cs">
-      <DependentUpon>C_CoursesDetailed.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesShort.aspx.cs">
+      <DependentUpon>CoursesShort.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\A.Courses\C_CoursesDetailed.aspx.designer.cs">
-      <DependentUpon>C_CoursesDetailed.aspx</DependentUpon>
+    <Compile Include="AllPages\A.CoursesFolder\CoursesShort.aspx.designer.cs">
+      <DependentUpon>CoursesShort.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\B.Media\A_Media.aspx.cs">
-      <DependentUpon>A_Media.aspx</DependentUpon>
+    <Compile Include="AllPages\B.MediaFolder\MediaPage.aspx.cs">
+      <DependentUpon>MediaPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\B.Media\A_Media.aspx.designer.cs">
-      <DependentUpon>A_Media.aspx</DependentUpon>
+    <Compile Include="AllPages\B.MediaFolder\MediaPage.aspx.designer.cs">
+      <DependentUpon>MediaPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\C.Training\A_Training.aspx.cs">
-      <DependentUpon>A_Training.aspx</DependentUpon>
+    <Compile Include="AllPages\C.TrainingFolder\Training.aspx.cs">
+      <DependentUpon>Training.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\C.Training\A_Training.aspx.designer.cs">
-      <DependentUpon>A_Training.aspx</DependentUpon>
+    <Compile Include="AllPages\C.TrainingFolder\Training.aspx.designer.cs">
+      <DependentUpon>Training.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\D.Services\A_Services.aspx.cs">
-      <DependentUpon>A_Services.aspx</DependentUpon>
+    <Compile Include="AllPages\D.ServicesFolder\ServicesPage.aspx.cs">
+      <DependentUpon>ServicesPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\D.Services\A_Services.aspx.designer.cs">
-      <DependentUpon>A_Services.aspx</DependentUpon>
+    <Compile Include="AllPages\D.ServicesFolder\ServicesPage.aspx.designer.cs">
+      <DependentUpon>ServicesPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\E.Events\A_Events.aspx.cs">
-      <DependentUpon>A_Events.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\Events.aspx.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\E.Events\A_Events.aspx.designer.cs">
-      <DependentUpon>A_Events.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\Events.aspx.designer.cs">
+      <DependentUpon>Events.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventDetailed.aspx.cs">
-      <DependentUpon>B_EventDetailed.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\EventsDetailed.aspx.cs">
+      <DependentUpon>EventsDetailed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventDetailed.aspx.designer.cs">
-      <DependentUpon>B_EventDetailed.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\EventsDetailed.aspx.designer.cs">
+      <DependentUpon>EventsDetailed.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventForm.aspx.cs">
-      <DependentUpon>B_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\EventsForm.aspx.cs">
+      <DependentUpon>EventsForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\E.Events\B_EventForm.aspx.designer.cs">
-      <DependentUpon>B_EventForm.aspx</DependentUpon>
+    <Compile Include="AllPages\E.EventsFolder\EventsForm.aspx.designer.cs">
+      <DependentUpon>EventsForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\F.Admission\A_Admission.aspx.cs">
-      <DependentUpon>A_Admission.aspx</DependentUpon>
+    <Compile Include="AllPages\F.AdmissionsFolder\Admissions.aspx.cs">
+      <DependentUpon>Admissions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\F.Admission\A_Admission.aspx.designer.cs">
-      <DependentUpon>A_Admission.aspx</DependentUpon>
+    <Compile Include="AllPages\F.AdmissionsFolder\Admissions.aspx.designer.cs">
+      <DependentUpon>Admissions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\F.Admission\B_AdmissionForm.aspx.cs">
-      <DependentUpon>B_AdmissionForm.aspx</DependentUpon>
+    <Compile Include="AllPages\F.AdmissionsFolder\AdmissionsForm.aspx.cs">
+      <DependentUpon>AdmissionsForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\F.Admission\B_AdmissionForm.aspx.designer.cs">
-      <DependentUpon>B_AdmissionForm.aspx</DependentUpon>
+    <Compile Include="AllPages\F.AdmissionsFolder\AdmissionsForm.aspx.designer.cs">
+      <DependentUpon>AdmissionsForm.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\G.AboutUs\A_AboutUs.aspx.cs">
-      <DependentUpon>A_AboutUs.aspx</DependentUpon>
+    <Compile Include="AllPages\G.AboutUsFolder\AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\G.AboutUs\A_AboutUs.aspx.designer.cs">
-      <DependentUpon>A_AboutUs.aspx</DependentUpon>
+    <Compile Include="AllPages\G.AboutUsFolder\AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Global.asax.cs">

@@ -65,54 +65,54 @@
                     <ul class="nav navbar-nav">
                         <li><a href="/HomePage.aspx">Home</a></li>
                         <li class="dropdown">
-                            <a href="/Allpages/E.Events/A_Events.aspx">Events</a>
+                            <a href="/Allpages/E.EventsFolder/Events.aspx">Events</a>
                         </li>
                         
                         <li class="dropdown">
-                            <a href="/Allpages/G.AboutUs/A_AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
+                            <a href="/Allpages/G.AboutUsFolder/AboutUs.aspx" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Our vision, Mission, Values</a></li>
-                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Facilities</a></li>
-                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">ACI distinguished chefs advisory panel</a></li>
-                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">Our partnets</a></li>
-                                <li><a href="/Allpages/G.AboutUs/A_AboutUs.aspx">FAQs</a></li>
+                                <li><a href="/Allpages/G.AboutUsFolder/AboutUs.aspx">Our vision, Mission, Values</a></li>
+                                <li><a href="/Allpages/G.AboutUsFolder/AboutUs.aspx">Facilities</a></li>
+                                <li><a href="/Allpages/G.AboutUsFolder/AboutUs.aspx">ACI distinguished chefs advisory panel</a></li>
+                                <li><a href="/Allpages/G.AboutUsFolder/AboutUs.aspx">Our partnets</a></li>
+                                <li><a href="/Allpages/G.AboutUsFolder/AboutUs.aspx">FAQs</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="/Allpages/A.Courses/A_Courses.aspx" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
+                            <a href="/Allpages/A.CoursesFolder/Courses.aspx" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/A.Courses/B_CoursesFull.aspx">Full Qualification Courses</a></li>
-                                <li><a href="/Allpages/A.Courses/B_CoursesShort.aspx">Short Courses</a></li>
-                                <li><a href="/Allpages/A.Courses/B_CoursesCustomised.aspx">Customised Courses</a></li>
+                                <li><a href="/Allpages/A.CoursesFolder/CoursesFull.aspx">Full Qualification Courses</a></li>
+                                <li><a href="/Allpages/A.CoursesFolder/CoursesShort.aspx">Short Courses</a></li>
+                                <li><a href="/Allpages/A.CoursesFolder/CoursesCustomised.aspx">Customised Courses</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="/Allpages/C.Training/A_Training.aspx" class="dropdown-toggle" data-toggle="dropdown">Training<span class="caret"></span></a>
+                            <a href="/Allpages/C.TrainingFolder/Training.aspx" class="dropdown-toggle" data-toggle="dropdown">Training<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/C.Training/A_Training.aspx">Assessment-Only Pathway</a></li>
+                                <li><a href="/Allpages/C.TrainingFolder/Training.aspx">Assessment-Only Pathway</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="/Allpages/D.Services/A_Services.aspx" class="dropdown-toggle" data-toggle="dropdown">Services<span class="caret"></span></a>
+                            <a href="/Allpages/D.ServicesFolder/ServicesPage.aspx" class="dropdown-toggle" data-toggle="dropdown">Services<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/D.Services/A_Services.aspx">Career services</a></li>
-                                <li><a href="/Allpages/D.Services/A_Services.aspx">Project & Consultancy services</a></li>
-                                <li><a href="/Allpages/D.Services/A_Services.aspx">Job vacancies listing</a></li>
+                                <li><a href="/Allpages/D.ServicesFolder/ServicesPage.aspx">Career services</a></li>
+                                <li><a href="/Allpages/D.ServicesFolder/ServicesPage.aspx">Project & Consultancy services</a></li>
+                                <li><a href="/Allpages/D.ServicesFolder/ServicesPage.aspx">Job vacancies listing</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="/Allpages/F.Admission/A_Admission.aspx" class="dropdown-toggle" data-toggle="dropdown">Admission<span class="caret"></span></a>
+                            <a href="/Allpages/F.AdmissionsFolder/Admissions.aspx" class="dropdown-toggle" data-toggle="dropdown">Admission<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/F.Admission/A_Admission.aspx">Online registeration</a></li>
+                                <li><a href="/Allpages/F.AdmissionsFolder/Admissions.aspx">Online registeration</a></li>
 
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="/Allpages/B.Media/A_Media.aspx" class="dropdown-toggle" data-toggle="dropdown">Media<span class="caret"></span></a>
+                            <a href="/Allpages/B.MediaFolder/MediaPage.aspx" class="dropdown-toggle" data-toggle="dropdown">Media<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/B.Media/A_Media.aspx">Photo gallery</a></li>
-                                <li><a href="/Allpages/B.Media/A_Media.aspx">Videos</a></li>
-                                <li><a href="/Allpages/B.Media/A_Media.aspx">Press Releases</a></li>
+                                <li><a href="/Allpages/B.MediaFolder/MediaPage.aspx">Photo gallery</a></li>
+                                <li><a href="/Allpages/B.MediaFolder/MediaPage.aspx">Videos</a></li>
+                                <li><a href="/Allpages/B.MediaFolder/MediaPage.aspx">Press Releases</a></li>
                             </ul>
                         </li>
 
