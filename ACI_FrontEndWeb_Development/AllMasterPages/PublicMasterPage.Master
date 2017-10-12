@@ -81,8 +81,8 @@
                         <li class="dropdown">
                             <a href="/Allpages/A.Courses/A_Courses.aspx" class="dropdown-toggle" data-toggle="dropdown">Courses<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/Allpages/A.Courses/B_CoursesFull.aspx">Full Qualification</a></li>
-                                <li><a href="/Allpages/A.Courses/B_CoursesShort.aspx">Short</a></li>
+                                <li><a href="/Allpages/A.Courses/B_CoursesFull.aspx">Full Qualification Courses</a></li>
+                                <li><a href="/Allpages/A.Courses/B_CoursesShort.aspx">Short Courses</a></li>
                                 <li><a href="/Allpages/A.Courses/B_CoursesCustomised.aspx">Customised Courses</a></li>
                             </ul>
                         </li>

@@ -29,7 +29,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.Events
 
         protected void signup_Click(object sender, EventArgs e)
         {
-            Response.Redirect("B_EventForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"])+  ";EventTitle=" + eventTitle.InnerText);
+            Response.Redirect("B_EventForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"])+  "&EventTitle=" + eventTitle.InnerText.ToString());
         }
     }
 }
