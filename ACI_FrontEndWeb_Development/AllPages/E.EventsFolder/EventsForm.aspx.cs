@@ -26,10 +26,10 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
                 ddlnationality.DataBind();
                 ddlnationality.Items.FindByValue("Singapore").Selected = true;
                 DOBfillup();
-                EventID = int.Parse(Request.QueryString["EventID"]);
-                EventTitle = Request.QueryString["EventTitle"];
-               // EventID = 5;
-               // EventTitle = "Testing Event";
+               EventID = int.Parse(Request.QueryString["EventID"]);
+               EventTitle = Request.QueryString["EventTitle"];
+              // EventID = 5;
+               //EventTitle = "Testing Event";
             }
         }
 

@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoursesDAL.cs" />
     <Compile Include="E.Events\EventsDAL.cs" />
     <Compile Include="E.Events\LoadCountryList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
