@@ -8,10 +8,12 @@ using BussinessLogicLayer.E.Events;
 using DataAccessLayer.E.Events;
 using System.Data;
 
+
 namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 {
     public partial class Events : System.Web.UI.Page
     {
+      //  ServiceReference1.Service1Client sr = new ServiceReference1.Service1Client();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
@@ -22,6 +24,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 
                 EventRPT.DataSource = dt;
                 EventRPT.DataBind();
+                
             }
         }
 

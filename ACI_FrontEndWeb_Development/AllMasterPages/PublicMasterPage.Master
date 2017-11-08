@@ -21,13 +21,13 @@
             width: 100%;
             -webkit-transition: all .5s ease-in-out;
             transition: all .5s ease-in-out;
-            background-color: grey;
-            border-color: #000;
+            background-color: #373737;
+            border-color: #373737;
             z-index: 9999 !important;
         }
 
             .affix a {
-                color: #000 !important;
+                color: #fff !important;
                 padding: 15px !important;
                 -webkit-transition: all .5s ease-in-out;
                 transition: all .5s ease-in-out;

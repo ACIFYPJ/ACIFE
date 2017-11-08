@@ -32,7 +32,6 @@
                         <li class=""><a href="#ACIchefs" data-toggle="tab" aria-expanded="false">ACI Distinguished Chefs Advisory Panel</a></li>
                         <li class=""><a href="#OurPartners" data-toggle="tab" aria-expanded="false">Our Partners</a></li>
                         <li class=""><a href="#FAQs" data-toggle="tab" aria-expanded="false">FAQs</a></li>
-
                     </ul>
                     <div id="myTabContent" class="tab-content">
                         <div class="tab-pane fade active in" id="OurVision">

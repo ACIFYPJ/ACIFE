@@ -80,19 +80,18 @@ item,
 
 .navbar {
     margin-bottom: 0px;
-    background-color: rgba(0,0,0,0.2);
+    background-color: #373737;
     border-radius: 0px;
     border: none;
 }
 
     .navbar a {
-
-
-        color: #000 !important;
+        color: #fff !important;
+        background-color:#373737;
     }
 
         .navbar a:hover {
-            color: #000 !important;
+            color: red !important;
         }
 
 .intro-headerEvents {
@@ -100,11 +99,12 @@ item,
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     background: url('../images/eventbig.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .intro-headerEventDetails {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -113,6 +113,7 @@ item,
     background: url('../images/eventdetailsbig.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .intro-headerAdmission {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -121,6 +122,7 @@ item,
     background: url('../images/admissionbig.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .intro-headerMedia {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -129,6 +131,7 @@ item,
     background: url('../images/mediabig.jpg') no-repeat center center;
     background-size: cover;
 }
+
 .intro-headerServices {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -137,7 +140,8 @@ item,
     background: url('../images/servicesbig.jpg') no-repeat center center;
     background-size: cover;
 }
- .intro-headerTraining {
+
+.intro-headerTraining {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
@@ -186,7 +190,7 @@ item,
     padding-top: 20%;
     padding-bottom: 0%;
     text-align: center;
-    color:red;
+    color: red;
 }
 
 .intro-message > h1 {
@@ -215,6 +219,7 @@ item,
     border-bottom: 1px solid rgba(0,0,0,0.2);
     border-top-color: #000000;
 }
+
 .intro-message > h3 {
     color: #A40000;
 }
@@ -243,7 +248,7 @@ item,
     border-width: 1px;
     border-color: #669999;
     padding-bottom: 20px;
-    height:30%;
+    height: 30%;
 }
 
 .section-title {
@@ -296,7 +301,6 @@ item,
 #our-services .col-sm-6.col-md-3 {
     border-right: 1px solid #e2e2e2;
     position: relative;
-  
 }
 
     #our-services .col-sm-6.col-md-3:nth-of-type(4n) {
@@ -315,7 +319,7 @@ item,
             width: 5px;
             height: 5px;
             z-index: 99;
-            border-radius: 50%;       
+            border-radius: 50%;
         }
 
 .service-content {
@@ -617,7 +621,7 @@ item,
 
 .footer-bottom {
     padding: 25px 0 15px;
-    background-color:  rgba(0,0,0,0.2);
+    background-color:#373737;
 }
 
     .footer-bottom a, .footer-bottom p {
@@ -669,6 +673,34 @@ item,
         color: #fff;
     }
 
+.subprogramme {
+    width: 100%;
+    background-color: #373737;
+    height: 30px;
+    text-align: center;
+    vertical-align: central;
+}
+
+hr.style-three {
+    height: 30px;
+    border-style: solid;
+    border-color: red;
+    border-width: 3px 0 0 0;
+    border-radius: 5px;
+    margin-bottom:-30px;
+}
+hr.style-bottom {
+display: block;
+content: "";
+height: 30px;
+margin-top: 0px;
+border-style: solid;
+border-color: red;
+border-width: 0 0 1px 0;
+border-radius: 20px;
+}
+
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -700,9 +732,6 @@ item,
         text-align: center;
     }
 
-    #WSQLOGO{
-        
+    #WSQLOGO {
     }
 }
-
-
