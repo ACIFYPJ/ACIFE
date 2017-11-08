@@ -7,21 +7,30 @@ using System.Web.UI.WebControls;
 using BussinessLogicLayer.E.Events;
 using DataAccessLayer.E.Events;
 using System.Data;
+using System.IO;
+
 
 namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 {
+
     public partial class Events : System.Web.UI.Page
     {
+        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
             {
                 EventsBLL BLL = new EventsBLL();
                 //Populating a DataTable from database.
-                DataTable dt = BLL.GetData();
-
+                string xmldt = client.GetData();
+                StringReader xr = new StringReader(xmldt);
+                DataTable dt = new DataTable();
+                dt.ReadXml(xr);
+                //DataTable dt = BLL.GetData();
                 EventRPT.DataSource = dt;
                 EventRPT.DataBind();
+                
             }
         }
 
