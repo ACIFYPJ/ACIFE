@@ -7,6 +7,7 @@
         <h2 class="text-center">Sign up now!</h2>
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
+
             <fieldset class="form">
                 <div class="form-group">
                     <label class="control-label" for="Name">Full Name:</label>

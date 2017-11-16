@@ -263,10 +263,10 @@
                             <ItemTemplate>
                                 <tr>
                                 <td>
-                                    <asp:Label ID="lbStartDate" runat="server" Text='<%# ((DateTime)Eval("StartDate")).ToString("dd MMMM yyyy")  %>' />
+                                    <asp:Label ID="lbStartDate" runat="server" Text='<%# Eval("StartDate") %>'  />
                                 </td>
                                 <td>
-                                    <asp:Label ID="lbEndDate" runat="server" Text='<%# ((DateTime)Eval("EndDate")).ToString("dd MMMM yyyy")  %>' />
+                                    <asp:Label ID="lbEndDate" runat="server" Text='<%# Eval("EndDate") %>' />
                                 </td>
                                 <td>
                                     <asp:Label ID="lbTime" runat="server" Text='<%# Eval("ClassStartTime") + " - "+ Eval("ClassEndTime") %> ' />

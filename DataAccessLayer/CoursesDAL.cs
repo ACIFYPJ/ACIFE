@@ -31,6 +31,71 @@ namespace DataAccessLayer
             }
         }
 
+        public DataTable getAvailableCourses()
+        {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT ProgramID,ProgramName,ParentID,ChildID FROM aci_program WHERE Display=1 ORDER BY DisplayOrder ASC"))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
+
+        public DataTable getSpecificClassesAvailableToSignUp(int courseID)
+        {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * FROM aci_class WHERE RegStartDate < getDate() AND RegEndDate > getDate() AND CourseID=@CourseID"))
+                {
+                    cmd.Parameters.AddWithValue("@CourseID", courseID);
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
+
+        public DataTable getAllCoursesAvailableToSignUp()
+        {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT aci_class.CourseID, aci_course.CourseName FROM aci_class INNER JOIN aci_course ON aci_class.CourseID = aci_course.CourseID  WHERE RegStartDate < getDate() AND RegEndDate > getDate()"))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        using (DataTable dt = new DataTable())
+                        {
+                            sda.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+        }
+
+     
+
+
+
         public DataTable getClasses(int courseID)
         {
             using (SqlConnection con = new SqlConnection(constr))
