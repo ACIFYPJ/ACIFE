@@ -13,7 +13,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
     public partial class EventsForm : System.Web.UI.Page
     {
 
-        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
+        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
         private static int EventID;
         private static string EventTitle;
         protected void Page_Load(object sender, EventArgs e)

@@ -78,23 +78,65 @@ namespace ACI_FrontEndWeb_Development.ServiceReference1 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IService1")]
     public interface IService1 {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         ACI_FrontEndWeb_Development.ServiceReference1.CompositeType GetDataUsingDataContract(ACI_FrontEndWeb_Development.ServiceReference1.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference1.CompositeType> GetDataUsingDataContractAsync(ACI_FrontEndWeb_Development.ServiceReference1.CompositeType composite);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
-        string sayHello();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getEventDetails", ReplyAction="http://tempuri.org/IService1/getEventDetailsResponse")]
+        string getEventDetails(int eventID);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
-        System.Threading.Tasks.Task<string> sayHelloAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getEventDetails", ReplyAction="http://tempuri.org/IService1/getEventDetailsResponse")]
+        System.Threading.Tasks.Task<string> getEventDetailsAsync(int eventID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        string GetData();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
+        System.Threading.Tasks.Task<string> GetDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getClasses", ReplyAction="http://tempuri.org/IService1/getClassesResponse")]
+        string getClasses(int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getClasses", ReplyAction="http://tempuri.org/IService1/getClassesResponse")]
+        System.Threading.Tasks.Task<string> getClassesAsync(int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getcourseDetails", ReplyAction="http://tempuri.org/IService1/getcourseDetailsResponse")]
+        string getcourseDetails(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getcourseDetails", ReplyAction="http://tempuri.org/IService1/getcourseDetailsResponse")]
+        System.Threading.Tasks.Task<string> getcourseDetailsAsync(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourse", ReplyAction="http://tempuri.org/IService1/getCourseResponse")]
+        string getCourse(int ProgramID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourse", ReplyAction="http://tempuri.org/IService1/getCourseResponse")]
+        System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
+        System.IO.Stream getImage(int eventID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
+        System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAvailableCourses", ReplyAction="http://tempuri.org/IService1/getAvailableCoursesResponse")]
+        string getAvailableCourses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAvailableCourses", ReplyAction="http://tempuri.org/IService1/getAvailableCoursesResponse")]
+        System.Threading.Tasks.Task<string> getAvailableCoursesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse")]
+        string getSpecificClassesAvailableToSignUp(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse")]
+        System.Threading.Tasks.Task<string> getSpecificClassesAvailableToSignUpAsync(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse")]
+        string getAllCoursesAvailableToSignUp();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse")]
+        System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -124,14 +166,6 @@ namespace ACI_FrontEndWeb_Development.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
         public ACI_FrontEndWeb_Development.ServiceReference1.CompositeType GetDataUsingDataContract(ACI_FrontEndWeb_Development.ServiceReference1.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
@@ -140,12 +174,76 @@ namespace ACI_FrontEndWeb_Development.ServiceReference1 {
             return base.Channel.GetDataUsingDataContractAsync(composite);
         }
         
-        public string sayHello() {
-            return base.Channel.sayHello();
+        public string getEventDetails(int eventID) {
+            return base.Channel.getEventDetails(eventID);
         }
         
-        public System.Threading.Tasks.Task<string> sayHelloAsync() {
-            return base.Channel.sayHelloAsync();
+        public System.Threading.Tasks.Task<string> getEventDetailsAsync(int eventID) {
+            return base.Channel.getEventDetailsAsync(eventID);
+        }
+        
+        public string GetData() {
+            return base.Channel.GetData();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetDataAsync() {
+            return base.Channel.GetDataAsync();
+        }
+        
+        public string getClasses(int courseID) {
+            return base.Channel.getClasses(courseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getClassesAsync(int courseID) {
+            return base.Channel.getClassesAsync(courseID);
+        }
+        
+        public string getcourseDetails(int CourseID) {
+            return base.Channel.getcourseDetails(CourseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getcourseDetailsAsync(int CourseID) {
+            return base.Channel.getcourseDetailsAsync(CourseID);
+        }
+        
+        public string getCourse(int ProgramID) {
+            return base.Channel.getCourse(ProgramID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID) {
+            return base.Channel.getCourseAsync(ProgramID);
+        }
+        
+        public System.IO.Stream getImage(int eventID) {
+            return base.Channel.getImage(eventID);
+        }
+        
+        public System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID) {
+            return base.Channel.getImageAsync(eventID);
+        }
+        
+        public string getAvailableCourses() {
+            return base.Channel.getAvailableCourses();
+        }
+        
+        public System.Threading.Tasks.Task<string> getAvailableCoursesAsync() {
+            return base.Channel.getAvailableCoursesAsync();
+        }
+        
+        public string getSpecificClassesAvailableToSignUp(int CourseID) {
+            return base.Channel.getSpecificClassesAvailableToSignUp(CourseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getSpecificClassesAvailableToSignUpAsync(int CourseID) {
+            return base.Channel.getSpecificClassesAvailableToSignUpAsync(CourseID);
+        }
+        
+        public string getAllCoursesAvailableToSignUp() {
+            return base.Channel.getAllCoursesAvailableToSignUp();
+        }
+        
+        public System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync() {
+            return base.Channel.getAllCoursesAvailableToSignUpAsync();
         }
     }
 }

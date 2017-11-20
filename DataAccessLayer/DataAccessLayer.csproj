@@ -42,6 +42,7 @@
     <Compile Include="CoursesDAL.cs" />
     <Compile Include="E.Events\EventsDAL.cs" />
     <Compile Include="E.Events\LoadCountryList.cs" />
+    <Compile Include="HomeDAL.cs" />
     <Compile Include="OnlineSignUp_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

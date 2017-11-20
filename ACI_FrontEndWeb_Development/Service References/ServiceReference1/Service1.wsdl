@@ -3,20 +3,7 @@
   <wsdl:types>
     <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:import namespace="http://schemas.datacontract.org/2004/07/WCFService" />
-      <xs:element name="GetData">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" name="value" type="xs:int" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-      <xs:element name="GetDataResponse">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+      <xs:import namespace="http://schemas.microsoft.com/Message" />
       <xs:element name="GetDataUsingDataContract">
         <xs:complexType>
           <xs:sequence>
@@ -31,15 +18,123 @@
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="sayHello">
+      <xs:element name="getEventDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="eventID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getEventDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getEventDetailsResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetData">
         <xs:complexType>
           <xs:sequence />
         </xs:complexType>
       </xs:element>
-      <xs:element name="sayHelloResponse">
+      <xs:element name="GetDataResponse">
         <xs:complexType>
           <xs:sequence>
-            <xs:element minOccurs="0" name="sayHelloResult" nillable="true" type="xs:string" />
+            <xs:element minOccurs="0" name="GetDataResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClasses">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="courseID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getClassesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getClassesResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getcourseDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CourseID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getcourseDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getcourseDetailsResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCourse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ProgramID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getCourseResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getCourseResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getImage">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="eventID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getImageResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="getImageResult" type="q3:StreamBody" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAvailableCourses">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAvailableCoursesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getAvailableCoursesResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecificClassesAvailableToSignUp">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CourseID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getSpecificClassesAvailableToSignUpResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getSpecificClassesAvailableToSignUpResult" nillable="true" type="xs:string" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllCoursesAvailableToSignUp">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getAllCoursesAvailableToSignUpResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="getAllCoursesAvailableToSignUpResult" nillable="true" type="xs:string" />
           </xs:sequence>
         </xs:complexType>
       </xs:element>
@@ -94,50 +189,116 @@
       </xs:complexType>
       <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
     </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/Message" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/Message" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="StreamBody">
+        <xs:restriction base="xs:base64Binary" />
+      </xs:simpleType>
+    </xs:schema>
   </wsdl:types>
-  <wsdl:message name="IService1_GetData_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetData" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetData_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetDataResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_sayHello_InputMessage">
-    <wsdl:part name="parameters" element="tns:sayHello" />
+  <wsdl:message name="IService1_getEventDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEventDetails" />
   </wsdl:message>
-  <wsdl:message name="IService1_sayHello_OutputMessage">
-    <wsdl:part name="parameters" element="tns:sayHelloResponse" />
+  <wsdl:message name="IService1_getEventDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClasses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCourses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUpResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
-    <wsdl:operation name="GetData">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="sayHello">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sayHello" message="tns:IService1_sayHello_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sayHelloResponse" message="tns:IService1_sayHello_OutputMessage" />
+    <wsdl:operation name="getEventDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEventDetails" message="tns:IService1_getEventDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getEventDetailsResponse" message="tns:IService1_getEventDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getClasses" message="tns:IService1_getClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getClassesResponse" message="tns:IService1_getClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getcourseDetails" message="tns:IService1_getcourseDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getcourseDetailsResponse" message="tns:IService1_getcourseDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCourse" message="tns:IService1_getCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCourseResponse" message="tns:IService1_getCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getImage" message="tns:IService1_getImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getImageResponse" message="tns:IService1_getImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAvailableCourses" message="tns:IService1_getAvailableCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAvailableCoursesResponse" message="tns:IService1_getAvailableCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" message="tns:IService1_getSpecificClassesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse" message="tns:IService1_getSpecificClassesAvailableToSignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" message="tns:IService1_getAllCoursesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse" message="tns:IService1_getAllCoursesAvailableToSignUp_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="GetData">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
       <wsdl:input>
@@ -147,8 +308,80 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="sayHello">
-      <soap:operation soapAction="http://tempuri.org/IService1/sayHello" style="document" />
+    <wsdl:operation name="getEventDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getEventDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClasses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getcourseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/getImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAvailableCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

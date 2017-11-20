@@ -116,6 +116,7 @@
     <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm4.aspx" />
     <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm5.aspx" />
     <Content Include="AllPages\H.OnlineSignUpForm\CoursesFormFinal.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\EventForm.aspx" />
     <Content Include="css\TableCss.css" />
     <Content Include="fonts\lato-bold-webfont.eot" />
     <Content Include="fonts\lato-bold-webfont.ttf" />
@@ -405,6 +406,13 @@
     </Compile>
     <Compile Include="AllPages\H.OnlineSignUpForm\CoursesFormFinal.aspx.designer.cs">
       <DependentUpon>CoursesFormFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\EventForm.aspx.cs">
+      <DependentUpon>EventForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\EventForm.aspx.designer.cs">
+      <DependentUpon>EventForm.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Global.asax.cs">

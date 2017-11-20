@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="A.Courses\CoursesBLL.cs" />
     <Compile Include="E.Events\EventsBLL.cs" />
+    <Compile Include="HomeBLL.cs" />
     <Compile Include="OnlineSignUp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

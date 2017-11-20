@@ -51,7 +51,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
             DDLProgram.DataValueField = "CourseID";
             DDLProgram.DataTextField = "CourseName";
             DDLProgram.DataBind();
-            Label1.Text = DDLProgram.SelectedValue.ToString();
+          
           loadClassDDL(int.Parse(DDLProgram.SelectedValue.ToString()));
         }
 

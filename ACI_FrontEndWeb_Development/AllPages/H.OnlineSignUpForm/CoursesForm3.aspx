@@ -105,9 +105,9 @@
                                     <div class="form-group">
                                         <label class="control-label">Identification type:</label>
                                         <asp:DropDownList ID="ddlIdentificationType" runat="server" CssClass="form-control">
-                                            <asp:ListItem Value="SGC">Singapore Citizen</asp:ListItem>
-                                            <asp:ListItem Value="SGPR">Singapore PR</asp:ListItem>
-                                            <asp:ListItem Value="FIN">Foreigner</asp:ListItem>
+                                            <asp:ListItem Value="1">Singapore Citizen</asp:ListItem>
+                                            <asp:ListItem Value="2">Singapore PR</asp:ListItem>
+                                            <asp:ListItem Value="3">Others</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
 
