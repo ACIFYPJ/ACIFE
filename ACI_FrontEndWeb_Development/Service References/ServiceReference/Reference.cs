@@ -56,6 +56,24 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
         System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAvailableCourses", ReplyAction="http://tempuri.org/IService1/getAvailableCoursesResponse")]
+        string getAvailableCourses();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAvailableCourses", ReplyAction="http://tempuri.org/IService1/getAvailableCoursesResponse")]
+        System.Threading.Tasks.Task<string> getAvailableCoursesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse")]
+        string getSpecificClassesAvailableToSignUp(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse")]
+        System.Threading.Tasks.Task<string> getSpecificClassesAvailableToSignUpAsync(int CourseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse")]
+        string getAllCoursesAvailableToSignUp();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse")]
+        System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -139,6 +157,30 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         public System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID) {
             return base.Channel.getImageAsync(eventID);
+        }
+        
+        public string getAvailableCourses() {
+            return base.Channel.getAvailableCourses();
+        }
+        
+        public System.Threading.Tasks.Task<string> getAvailableCoursesAsync() {
+            return base.Channel.getAvailableCoursesAsync();
+        }
+        
+        public string getSpecificClassesAvailableToSignUp(int CourseID) {
+            return base.Channel.getSpecificClassesAvailableToSignUp(CourseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getSpecificClassesAvailableToSignUpAsync(int CourseID) {
+            return base.Channel.getSpecificClassesAvailableToSignUpAsync(CourseID);
+        }
+        
+        public string getAllCoursesAvailableToSignUp() {
+            return base.Channel.getAllCoursesAvailableToSignUp();
+        }
+        
+        public System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync() {
+            return base.Channel.getAllCoursesAvailableToSignUpAsync();
         }
     }
 }

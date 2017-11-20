@@ -50,6 +50,24 @@
   <wsdl:message name="IService1_getImage_OutputMessage">
     <wsdl:part name="parameters" element="tns:getImageResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCourses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUpResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -78,6 +96,18 @@
     <wsdl:operation name="getImage">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getImage" message="tns:IService1_getImage_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/getImageResponse" message="tns:IService1_getImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAvailableCourses" message="tns:IService1_getAvailableCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAvailableCoursesResponse" message="tns:IService1_getAvailableCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" message="tns:IService1_getSpecificClassesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse" message="tns:IService1_getSpecificClassesAvailableToSignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" message="tns:IService1_getAllCoursesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse" message="tns:IService1_getAllCoursesAvailableToSignUp_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -138,6 +168,33 @@
     </wsdl:operation>
     <wsdl:operation name="getImage">
       <soap:operation soapAction="http://tempuri.org/IService1/getImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAvailableCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
