@@ -14,7 +14,7 @@ namespace DataAccessLayer.E.Events
 {
     public class EventsDAL
     {
-        
+
         public SqlConnection GetConnection()
         {
             SqlConnection dbConn;

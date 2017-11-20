@@ -8,8 +8,84 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ACI_FrontEndWeb_Development.ServiceReference {
+namespace BussinessLogicLayer.ServiceReference {
+    using System.Runtime.Serialization;
+    using System;
     
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+    [System.SerializableAttribute()]
+    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool BoolValueField;
+
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string StringValueField;
+
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool BoolValue
+        {
+            get
+            {
+                return this.BoolValueField;
+            }
+            set
+            {
+                if ((this.BoolValueField.Equals(value) != true))
+                {
+                    this.BoolValueField = value;
+                    this.RaisePropertyChanged("BoolValue");
+                }
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StringValue
+        {
+            get
+            {
+                return this.StringValueField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.StringValueField, value) != true))
+                {
+                    this.StringValueField = value;
+                    this.RaisePropertyChanged("StringValue");
+                }
+            }
+        }
+        [field: NonSerialized]
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+
+        protected void RaisePropertyChanged(string propertyName)
+        {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null))
+            {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService1")]
@@ -20,6 +96,12 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<BussinessLogicLayer.ServiceReference.CompositeType> GetDataUsingDataContractAsync(BussinessLogicLayer.ServiceReference.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
+        string sayHello();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
+        System.Threading.Tasks.Task<string> sayHelloAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getEventDetails", ReplyAction="http://tempuri.org/IService1/getEventDetailsResponse")]
         string getEventDetails(int eventID);
@@ -50,21 +132,15 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourse", ReplyAction="http://tempuri.org/IService1/getCourseResponse")]
         System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
-        System.IO.Stream getImage(int eventID);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
-        System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : ACI_FrontEndWeb_Development.ServiceReference.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : BussinessLogicLayer.ServiceReference.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<ACI_FrontEndWeb_Development.ServiceReference.IService1>, ACI_FrontEndWeb_Development.ServiceReference.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<BussinessLogicLayer.ServiceReference.IService1>, BussinessLogicLayer.ServiceReference.IService1 {
         
         public Service1Client() {
         }
@@ -91,6 +167,14 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         public System.Threading.Tasks.Task<BussinessLogicLayer.ServiceReference.CompositeType> GetDataUsingDataContractAsync(BussinessLogicLayer.ServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public string sayHello() {
+            return base.Channel.sayHello();
+        }
+        
+        public System.Threading.Tasks.Task<string> sayHelloAsync() {
+            return base.Channel.sayHelloAsync();
         }
         
         public string getEventDetails(int eventID) {
@@ -131,14 +215,6 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         public System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID) {
             return base.Channel.getCourseAsync(ProgramID);
-        }
-        
-        public System.IO.Stream getImage(int eventID) {
-            return base.Channel.getImage(eventID);
-        }
-        
-        public System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID) {
-            return base.Channel.getImageAsync(eventID);
         }
     }
 }

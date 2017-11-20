@@ -12,13 +12,21 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 {
     public partial class EventsForm : System.Web.UI.Page
     {
-
         ServiceReference.Service1Client client = new ServiceReference.Service1Client();
         private static int EventID;
         private static string EventTitle;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                EventID = Int32.Parse(Session["eid"].ToString());
+                EventTitle = Session["eventTitle"].ToString();
+                
+            }
+            catch (NullReferenceException nre)
+            {
+                Response.Redirect("Events.aspx");
+            }
             if (!IsPostBack)
             {
                 LoadCountryList countrys = new LoadCountryList();
@@ -26,10 +34,8 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
                 ddlnationality.DataBind();
                 ddlnationality.Items.FindByValue("Singapore").Selected = true;
                 DOBfillup();
-               EventID = int.Parse(Request.QueryString["EventID"]);
-               EventTitle = Request.QueryString["EventTitle"];
-              // EventID = 5;
-               //EventTitle = "Testing Event";
+                //EventID = 5;
+                //EventTitle = "Testing Event";
             }
         }
 

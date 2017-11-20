@@ -53,31 +53,45 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertIntoEvents">
+  <xs:element name="getClasses">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="EventID" type="xs:int" />
-        <xs:element minOccurs="0" name="EventTitle" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="NRIC" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="Handphone" type="xs:int" />
-        <xs:element minOccurs="0" name="ReferralSource" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="reason" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="DOB" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="nationality" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="HighestEducation" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="CurrentEmployment" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="RegistrationDate" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="TnC" type="xs:int" />
+        <xs:element minOccurs="0" name="courseID" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="InsertIntoEventsResponse">
+  <xs:element name="getClassesResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element minOccurs="0" name="InsertIntoEventsResult" type="xs:int" />
-        <xs:element minOccurs="0" name="ex" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getClassesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getcourseDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CourseID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getcourseDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getcourseDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCourse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProgramID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getCourseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getCourseResult" nillable="true" type="xs:string" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

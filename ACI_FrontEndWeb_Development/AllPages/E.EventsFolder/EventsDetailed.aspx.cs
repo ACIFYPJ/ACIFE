@@ -20,10 +20,18 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
         EventsDAL DAL = new EventsDAL();
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             //Label1.Text = client.sayHello().ToString();
             //int EventID = 5;
             //Label1.Text = (xmldt);
             int EventID = int.Parse(Request.QueryString["EventID"]);
+            if ((imgResult.ImageUrl = "~/ShowImage.ashx?id=" + EventID) != null)
+            {
+                imgResult.ImageUrl = "~/ShowImage.ashx?id=" + EventID;
+            }
+            else
+                eventimg.Visible = false;
+            
             string xmldt = client.getEventDetails(EventID);
             StringReader xr = new StringReader(xmldt);
             DataTable dt = new DataTable();
@@ -32,7 +40,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
             //DataTable dt = DAL.getDetails(EventID);
             foreach (DataRow row in dt.Rows)
             {
-
+               
                 eventTitle.InnerHtml = row["EventTitle"].ToString();
                 date.InnerHtml = row["EventStart"].ToString();
                 location.InnerHtml = row["Location"].ToString();
@@ -42,7 +50,9 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 
         protected void signup_Click(object sender, EventArgs e)
         {
-            Response.Redirect("EventsForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"]) + "&EventTitle=" + eventTitle.InnerText.ToString());
+            Session["eid"] = int.Parse(Request.QueryString["EventID"]);
+            Session["eventTitle"] = eventTitle.InnerText.ToString();
+            Response.Redirect("EventsForm.aspx");
         }
     }
 }

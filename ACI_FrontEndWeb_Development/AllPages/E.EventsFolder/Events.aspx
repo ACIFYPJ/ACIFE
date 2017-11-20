@@ -51,16 +51,16 @@
                                     <tbody>
                             </HeaderTemplate>
                             <ItemTemplate>                                                    
-                                <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "EventID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                                <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "EventID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                     
                                          <td>
-                                        <asp:Label ID="lbDate" runat="server" Text='<%# ((DateTime)Eval("EventStart")).ToString("dd-MMMM")  %>' />
+                                        <asp:Label ID="lbDate" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(((DateTime)Eval("EventStart")).ToString("dd-MMMM"),true)  %>' />
                                     </td>
                                     <td>
-                                        <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("EventTitle") %>' />
+                                        <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("EventTitle").ToString(), true) %>' />
                                     </td>
                                      <td>
-                                        <asp:Label ID="lbEventDescription" runat="server" Text='<%# Eval("Description").ToString().PadRight(140).Substring(0,140).TrimEnd() + "..." %>' />
+                                        <asp:Label ID="lbEventDescription" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("Description").ToString().PadRight(140).Substring(0,140).TrimEnd(),true) + "..." %>' />
                                     </td>
                                   </ItemTemplate>
                             <FooterTemplate>

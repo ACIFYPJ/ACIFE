@@ -138,6 +138,7 @@
     <Content Include="js\tablejs.js" />
     <Content Include="js\tablejsbs.js" />
     <Content Include="packages.config" />
+    <Content Include="BussinessLogicLayer.ServiceReference.CompositeType.datasource" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -145,15 +146,27 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.js" />
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
-    <Content Include="Service References\ServiceReference1\ACI_FrontEndWeb_Development.ServiceReference1.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Service References\ServiceReference1\Service1.wsdl" />
+    <Content Include="ShowImage.ashx" />
+    <None Include="Service References\ServiceReference\Service11.wsdl" />
+    <None Include="Service References\ServiceReference\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\Service141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\Service142.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference\Service143.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -271,13 +284,15 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <None Include="Service References\ServiceReference1\configuration91.svcinfo" />
-    <None Include="Service References\ServiceReference1\configuration.svcinfo" />
-    <None Include="Service References\ServiceReference1\Reference.svcmap">
+    <None Include="Service References\ServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AllMasterPages\PublicMasterPage.Master.cs">
@@ -405,10 +420,13 @@
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Service References\ServiceReference1\Reference.cs">
+    <Compile Include="Service References\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShowImage.ashx.cs">
+      <DependentUpon>ShowImage.ashx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -425,7 +443,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -44,9 +44,9 @@
                                     <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "CourseID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                            <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "CourseID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                 <td>
-                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("CourseName") %>' />
+                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true) %>' />
                                 </td>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -67,9 +67,9 @@
                                     <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "CourseID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                            <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "CourseID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                 <td>
-                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("CourseName") %>' />
+                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true) %>' />
                                 </td>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -89,9 +89,9 @@
                                     <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "CourseID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                            <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "CourseID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                 <td>
-                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("CourseName") %>' />
+                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true) %>' />
                                 </td>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -122,9 +122,9 @@
                                     <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "CourseID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                            <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "CourseID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                 <td>
-                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("CourseName") %>' />
+                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true) %>' />
                                 </td>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -152,9 +152,9 @@
                                     <tbody>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr onclick="openEvent('<%# DataBinder.Eval(Container.DataItem, "CourseID") %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
+                            <tr onclick="openEvent('<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(DataBinder.Eval(Container.DataItem, "CourseID").ToString(),true) %>');" onmouseover="javascript:highlight(this);" onmouseout="javascript:unhighlight(this,1);">
                                 <td>
-                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# Eval("CourseName") %>' />
+                                    <asp:Label ID="lbEventTitle" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true) %>' />
                                 </td>
                         </ItemTemplate>
                         <FooterTemplate>
@@ -263,19 +263,19 @@
                             <ItemTemplate>
                                 <tr>
                                 <td>
-                                    <asp:Label ID="lbStartDate" runat="server" Text='<%# ((DateTime)Eval("StartDate")).ToString("dd MMMM yyyy")  %>' />
+                                    <asp:Label ID="lbStartDate" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(((DateTime)Eval("StartDate")).ToString("dd MMMM yyyy"),true)  %>' />
                                 </td>
                                 <td>
-                                    <asp:Label ID="lbEndDate" runat="server" Text='<%# ((DateTime)Eval("EndDate")).ToString("dd MMMM yyyy")  %>' />
+                                    <asp:Label ID="lbEndDate" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(((DateTime)Eval("EndDate")).ToString("dd MMMM yyyy"),true)  %>' />
                                 </td>
                                 <td>
-                                    <asp:Label ID="lbTime" runat="server" Text='<%# Eval("ClassStartTime") + " - "+ Eval("ClassEndTime") %> ' />
+                                    <asp:Label ID="lbTime" runat="server" Text='<%#  System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("ClassStartTime").ToString(),true) + " - "+ System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("ClassEndTime").ToString(),true) %> ' />
                                 </td>
                                 <td>
-                                    <asp:Label ID="lbLanguage" runat="server" Text='<%# Eval("Language") %>' />
+                                    <asp:Label ID="lbLanguage" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("Language").ToString(),true) %>' />
                                 </td>
                                 <td>
-                                    <asp:Label ID="lbRemarks" runat="server" Text='<%# Eval("Remarks") %>' />
+                                    <asp:Label ID="lbRemarks" runat="server" Text='<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("Remarks").ToString(),true) %>' />
                                 </td>
                                 </tr>
                             </ItemTemplate>

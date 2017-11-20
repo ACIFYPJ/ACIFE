@@ -3,6 +3,7 @@ using DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,8 @@ namespace ACI_FrontEndWeb_Development.AllPages.A.CoursesFolder
 {
     public partial class CoursesDetailed : System.Web.UI.Page
     {
+        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
+
         CoursesDAL DAL = new CoursesDAL();
         CoursesBLL BLL = new CoursesBLL();
         private static int courseID = -1;
@@ -29,7 +32,11 @@ namespace ACI_FrontEndWeb_Development.AllPages.A.CoursesFolder
         }
         private void loadclasses()
         {
-            DataTable dt = DAL.getClasses(courseID);
+            string xmldt = client.getClasses(courseID);
+            StringReader xr = new StringReader(xmldt);
+            DataTable dt = new DataTable();
+            dt.ReadXml(xr);
+            //DataTable dt = DAL.getClasses(courseID);
             bool hasRows = dt.Rows.GetEnumerator().MoveNext();
             if (hasRows == false)
             {
@@ -66,8 +73,11 @@ namespace ACI_FrontEndWeb_Development.AllPages.A.CoursesFolder
 
         private void loadcoursedetails()
         {
-            DataTable dt;
-            dt = DAL.getcourseDetails(courseID);
+            string xmldt = client.getcourseDetails(courseID);
+            StringReader xr = new StringReader(xmldt);
+            DataTable dt = new DataTable();
+            dt.ReadXml(xr);
+            //dt = DAL.getcourseDetails(courseID);
             string title = "";
             string overview = "";
             string targetaudience = "";
