@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
-      <xsd:import schemaLocation="http://localhost:1576/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:1576/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:1576/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:12345/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:12345/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:12345/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:12345/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
@@ -12,12 +13,6 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_sayHello_InputMessage">
-    <wsdl:part name="parameters" element="tns:sayHello" />
-  </wsdl:message>
-  <wsdl:message name="IService1_sayHello_OutputMessage">
-    <wsdl:part name="parameters" element="tns:sayHelloResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_getEventDetails_InputMessage">
     <wsdl:part name="parameters" element="tns:getEventDetails" />
@@ -31,20 +26,34 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_InsertIntoEvents_InputMessage">
-    <wsdl:part name="parameters" element="tns:InsertIntoEvents" />
+  <wsdl:message name="IService1_getClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClasses" />
   </wsdl:message>
-  <wsdl:message name="IService1_InsertIntoEvents_OutputMessage">
-    <wsdl:part name="parameters" element="tns:InsertIntoEventsResponse" />
+  <wsdl:message name="IService1_getClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getImageResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="sayHello">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/sayHello" message="tns:IService1_sayHello_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/sayHelloResponse" message="tns:IService1_sayHello_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="getEventDetails">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEventDetails" message="tns:IService1_getEventDetails_InputMessage" />
@@ -54,24 +63,27 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="InsertIntoEvents">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertIntoEvents" message="tns:IService1_InsertIntoEvents_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertIntoEventsResponse" message="tns:IService1_InsertIntoEvents_OutputMessage" />
+    <wsdl:operation name="getClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getClasses" message="tns:IService1_getClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getClassesResponse" message="tns:IService1_getClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getcourseDetails" message="tns:IService1_getcourseDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getcourseDetailsResponse" message="tns:IService1_getcourseDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCourse" message="tns:IService1_getCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCourseResponse" message="tns:IService1_getCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getImage" message="tns:IService1_getImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getImageResponse" message="tns:IService1_getImage_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetDataUsingDataContract">
       <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="sayHello">
-      <soap:operation soapAction="http://tempuri.org/IService1/sayHello" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -97,8 +109,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="InsertIntoEvents">
-      <soap:operation soapAction="http://tempuri.org/IService1/InsertIntoEvents" style="document" />
+    <wsdl:operation name="getClasses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getcourseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/getImage" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -109,7 +148,7 @@
   </wsdl:binding>
   <wsdl:service name="Service1">
     <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
-      <soap:address location="http://localhost:1576/Service1.svc" />
+      <soap:address location="http://localhost:12345/Service1.svc" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

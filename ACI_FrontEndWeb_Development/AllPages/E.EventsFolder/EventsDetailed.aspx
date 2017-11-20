@@ -14,8 +14,10 @@
         <li><a href="#">Events</a></li>
         <li class="active">Details</li>
     </ul>
-    
-    <asp:Image ID="imgResult" runat="server" />
+    <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+    <div id="eventimg" runat="server">
+            <asp:Image ID="imgResult" Width="100%" Height="100%" runat="server" />
+    </div>
     <h1 runat="server" id="eventTitle" />
     <h3 runat="server" id="dateTitle">Event Date</h3>
     <p runat="server" id="date" />

@@ -9,86 +9,17 @@
 //------------------------------------------------------------------------------
 
 namespace ACI_FrontEndWeb_Development.ServiceReference {
-    using System.Runtime.Serialization;
-    using System;
     
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompositeType", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
-    [System.SerializableAttribute()]
-    public partial class CompositeType : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool BoolValueField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string StringValueField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BoolValue {
-            get {
-                return this.BoolValueField;
-            }
-            set {
-                if ((this.BoolValueField.Equals(value) != true)) {
-                    this.BoolValueField = value;
-                    this.RaisePropertyChanged("BoolValue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StringValue {
-            get {
-                return this.StringValueField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.StringValueField, value) != true)) {
-                    this.StringValueField = value;
-                    this.RaisePropertyChanged("StringValue");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService1")]
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        ACI_FrontEndWeb_Development.ServiceReference.CompositeType GetDataUsingDataContract(ACI_FrontEndWeb_Development.ServiceReference.CompositeType composite);
+        BussinessLogicLayer.ServiceReference.CompositeType GetDataUsingDataContract(BussinessLogicLayer.ServiceReference.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
-        System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.CompositeType> GetDataUsingDataContractAsync(ACI_FrontEndWeb_Development.ServiceReference.CompositeType composite);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
-        string sayHello();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sayHello", ReplyAction="http://tempuri.org/IService1/sayHelloResponse")]
-        System.Threading.Tasks.Task<string> sayHelloAsync();
+        System.Threading.Tasks.Task<BussinessLogicLayer.ServiceReference.CompositeType> GetDataUsingDataContractAsync(BussinessLogicLayer.ServiceReference.CompositeType composite);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getEventDetails", ReplyAction="http://tempuri.org/IService1/getEventDetailsResponse")]
         string getEventDetails(int eventID);
@@ -102,100 +33,29 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetData", ReplyAction="http://tempuri.org/IService1/GetDataResponse")]
         System.Threading.Tasks.Task<string> GetDataAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertIntoEvents", ReplyAction="http://tempuri.org/IService1/InsertIntoEventsResponse")]
-        ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse InsertIntoEvents(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getClasses", ReplyAction="http://tempuri.org/IService1/getClassesResponse")]
+        string getClasses(int courseID);
         
-        // CODEGEN: Generating message contract since the operation has multiple return values.
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertIntoEvents", ReplyAction="http://tempuri.org/IService1/InsertIntoEventsResponse")]
-        System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertIntoEvents", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class InsertIntoEventsRequest {
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getClasses", ReplyAction="http://tempuri.org/IService1/getClassesResponse")]
+        System.Threading.Tasks.Task<string> getClassesAsync(int courseID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public int EventID;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getcourseDetails", ReplyAction="http://tempuri.org/IService1/getcourseDetailsResponse")]
+        string getcourseDetails(int CourseID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        public string EventTitle;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getcourseDetails", ReplyAction="http://tempuri.org/IService1/getcourseDetailsResponse")]
+        System.Threading.Tasks.Task<string> getcourseDetailsAsync(int CourseID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
-        public string FullName;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourse", ReplyAction="http://tempuri.org/IService1/getCourseResponse")]
+        string getCourse(int ProgramID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
-        public string NRIC;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCourse", ReplyAction="http://tempuri.org/IService1/getCourseResponse")]
+        System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
-        public string Email;
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
+        System.IO.Stream getImage(int eventID);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=5)]
-        public int Handphone;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=6)]
-        public string ReferralSource;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=7)]
-        public string reason;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=8)]
-        public System.DateTime DOB;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=9)]
-        public string nationality;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=10)]
-        public string HighestEducation;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=11)]
-        public string CurrentEmployment;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=12)]
-        public System.DateTime RegistrationDate;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=13)]
-        public int TnC;
-        
-        public InsertIntoEventsRequest() {
-        }
-        
-        public InsertIntoEventsRequest(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, System.DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, System.DateTime RegistrationDate, int TnC) {
-            this.EventID = EventID;
-            this.EventTitle = EventTitle;
-            this.FullName = FullName;
-            this.NRIC = NRIC;
-            this.Email = Email;
-            this.Handphone = Handphone;
-            this.ReferralSource = ReferralSource;
-            this.reason = reason;
-            this.DOB = DOB;
-            this.nationality = nationality;
-            this.HighestEducation = HighestEducation;
-            this.CurrentEmployment = CurrentEmployment;
-            this.RegistrationDate = RegistrationDate;
-            this.TnC = TnC;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertIntoEventsResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-    public partial class InsertIntoEventsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-        public int InsertIntoEventsResult;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
-        public string ex;
-        
-        public InsertIntoEventsResponse() {
-        }
-        
-        public InsertIntoEventsResponse(int InsertIntoEventsResult, string ex) {
-            this.InsertIntoEventsResult = InsertIntoEventsResult;
-            this.ex = ex;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getImage", ReplyAction="http://tempuri.org/IService1/getImageResponse")]
+        System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -225,20 +85,12 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public ACI_FrontEndWeb_Development.ServiceReference.CompositeType GetDataUsingDataContract(ACI_FrontEndWeb_Development.ServiceReference.CompositeType composite) {
+        public BussinessLogicLayer.ServiceReference.CompositeType GetDataUsingDataContract(BussinessLogicLayer.ServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContract(composite);
         }
         
-        public System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.CompositeType> GetDataUsingDataContractAsync(ACI_FrontEndWeb_Development.ServiceReference.CompositeType composite) {
+        public System.Threading.Tasks.Task<BussinessLogicLayer.ServiceReference.CompositeType> GetDataUsingDataContractAsync(BussinessLogicLayer.ServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
-        }
-        
-        public string sayHello() {
-            return base.Channel.sayHello();
-        }
-        
-        public System.Threading.Tasks.Task<string> sayHelloAsync() {
-            return base.Channel.sayHelloAsync();
         }
         
         public string getEventDetails(int eventID) {
@@ -257,34 +109,36 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
             return base.Channel.GetDataAsync();
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse ACI_FrontEndWeb_Development.ServiceReference.IService1.InsertIntoEvents(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request) {
-            return base.Channel.InsertIntoEvents(request);
+        public string getClasses(int courseID) {
+            return base.Channel.getClasses(courseID);
         }
         
-        public int InsertIntoEvents(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, System.DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, System.DateTime RegistrationDate, int TnC, out string ex) {
-            ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest inValue = new ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest();
-            inValue.EventID = EventID;
-            inValue.EventTitle = EventTitle;
-            inValue.FullName = FullName;
-            inValue.NRIC = NRIC;
-            inValue.Email = Email;
-            inValue.Handphone = Handphone;
-            inValue.ReferralSource = ReferralSource;
-            inValue.reason = reason;
-            inValue.DOB = DOB;
-            inValue.nationality = nationality;
-            inValue.HighestEducation = HighestEducation;
-            inValue.CurrentEmployment = CurrentEmployment;
-            inValue.RegistrationDate = RegistrationDate;
-            inValue.TnC = TnC;
-            ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse retVal = ((ACI_FrontEndWeb_Development.ServiceReference.IService1)(this)).InsertIntoEvents(inValue);
-            ex = retVal.ex;
-            return retVal.InsertIntoEventsResult;
+        public System.Threading.Tasks.Task<string> getClassesAsync(int courseID) {
+            return base.Channel.getClassesAsync(courseID);
         }
         
-        public System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request) {
-            return base.Channel.InsertIntoEventsAsync(request);
+        public string getcourseDetails(int CourseID) {
+            return base.Channel.getcourseDetails(CourseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getcourseDetailsAsync(int CourseID) {
+            return base.Channel.getcourseDetailsAsync(CourseID);
+        }
+        
+        public string getCourse(int ProgramID) {
+            return base.Channel.getCourse(ProgramID);
+        }
+        
+        public System.Threading.Tasks.Task<string> getCourseAsync(int ProgramID) {
+            return base.Channel.getCourseAsync(ProgramID);
+        }
+        
+        public System.IO.Stream getImage(int eventID) {
+            return base.Channel.getImage(eventID);
+        }
+        
+        public System.Threading.Tasks.Task<System.IO.Stream> getImageAsync(int eventID) {
+            return base.Channel.getImageAsync(eventID);
         }
     }
 }

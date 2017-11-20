@@ -21,6 +21,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
         {
             if (!this.IsPostBack)
             {
+                
                 EventsBLL BLL = new EventsBLL();
                 //Populating a DataTable from database.
                 string xmldt = client.GetData();

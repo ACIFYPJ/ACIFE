@@ -1,32 +1,22 @@
-﻿using System;
+﻿using BussinessLogicLayer.E.Events;
+using DataAccessLayer.E.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data;
-using DataAccessLayer.E.Events;
-using BussinessLogicLayer.E.Events;
 
-namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
+namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
 {
-    public partial class EventsForm : System.Web.UI.Page
+    public partial class EventForm : System.Web.UI.Page
     {
-        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
+        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
         private static int EventID;
         private static string EventTitle;
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
-            {
-                EventID = Int32.Parse(Session["eid"].ToString());
-                EventTitle = Session["eventTitle"].ToString();
-                
-            }
-            catch (NullReferenceException nre)
-            {
-                Response.Redirect("Events.aspx");
-            }
+
             if (!IsPostBack)
             {
                 LoadCountryList countrys = new LoadCountryList();
@@ -34,7 +24,9 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
                 ddlnationality.DataBind();
                 ddlnationality.Items.FindByValue("Singapore").Selected = true;
                 DOBfillup();
-                //EventID = 5;
+                EventID = int.Parse(Request.QueryString["EventID"]);
+                EventTitle = Request.QueryString["EventTitle"];
+                // EventID = 5;
                 //EventTitle = "Testing Event";
             }
         }
@@ -149,8 +141,9 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
             if (result >= 1)
             {
                 // Label1.Text = FullName + NRIC + Email + Handphone + ReferralSource + reason + DOB.ToString() + nationality + HighestEducation + CurrentEmployment;             
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "ShowPopup();", true);
-                this.lblMessage.Text = "Your registration is done successfully! Our team will contact you shotly";
+                //ClientScript.RegisterStartupScript(this.GetType(), "alert", "ShowPopup();", true);
+                //this.lblMessage.Text = "Your registration is done successfully! Our team will contact you shotly";
+                Response.Redirect("../../HomePage.aspx");
             }
             else
             {
