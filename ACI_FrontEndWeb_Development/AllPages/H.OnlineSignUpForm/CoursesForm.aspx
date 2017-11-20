@@ -31,7 +31,7 @@
             <br />
             <br />
             <br />
-           <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+          
             <div class="row">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-6">

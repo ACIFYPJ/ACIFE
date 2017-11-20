@@ -40,7 +40,10 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
             //DataTable dt = DAL.getDetails(EventID);
             foreach (DataRow row in dt.Rows)
             {
-               
+                if (int.Parse(row["RegistrationStatus"].ToString()) == 0)
+                {
+                    signup.Visible = false;
+                }
                 eventTitle.InnerHtml = row["EventTitle"].ToString();
                 date.InnerHtml = row["EventStart"].ToString();
                 location.InnerHtml = row["Location"].ToString();
@@ -53,6 +56,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
             Session["eid"] = int.Parse(Request.QueryString["EventID"]);
             Session["eventTitle"] = eventTitle.InnerText.ToString();
             Response.Redirect("EventsForm.aspx");
+            Response.Redirect("../H.OnlineSignUpForm/EventForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"]) + "&EventTitle=" + eventTitle.InnerText.ToString());
         }
     }
 }

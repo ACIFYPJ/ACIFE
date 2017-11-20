@@ -13,57 +13,48 @@ namespace ACI_FrontEndWeb_Development {
     public partial class HomePage {
         
         /// <summary>
-        /// Imagex control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Imagex;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Imagey control.
+        /// caroHeadrpt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Imagey;
+        protected global::System.Web.UI.WebControls.Repeater caroHeadrpt;
         
         /// <summary>
-        /// Imagez control.
+        /// carorpt control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Imagez;
+        protected global::System.Web.UI.WebControls.Repeater carorpt;
         
         /// <summary>
-        /// Image4 control.
+        /// EventFeaturedRPT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image4;
+        protected global::System.Web.UI.WebControls.Repeater EventFeaturedRPT;
         
         /// <summary>
-        /// Image5 control.
+        /// CoursesFeaturedRPT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image5;
-        
-        /// <summary>
-        /// Image6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image6;
+        protected global::System.Web.UI.WebControls.Repeater CoursesFeaturedRPT;
     }
 }

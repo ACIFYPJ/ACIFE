@@ -16,8 +16,8 @@ namespace DataAccessLayer
             {
                 try
                 {
-                    string spokenLanguage = "ENG"+SpokenEnglish+";CHN"+SpokenChinese+";OTH"+SpokenOthers;
-                    string writtenLanguage = "ENG"+WrittenEnglish+";CHN"+WrittenChinese+";OTH"+WrittenOthers;
+                    string spokenLanguage = SpokenEnglish+";"+SpokenChinese+";"+SpokenOthers;
+                    string writtenLanguage = WrittenEnglish+";"+WrittenChinese+";"+WrittenOthers;
 
                     con.Open();
                     string SQL = "INSERT INTO aci_online_applicant(FullName,NRIC,NRICType,Nationality,Gender,Race,HandPhone,Email,DOB,Address,PostalCode,HighestEducation,SpokenLanguage,WrittenLanguage,GetToKnow,SponsorShip, Company,EmploymentStatus,Position,Salary,JobStartDate,JobEndDate,ProgramID,ProjectCode,ProgramTitle,CurrentEmployment) ";
