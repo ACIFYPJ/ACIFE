@@ -100,10 +100,7 @@
   <ItemGroup>
     <Content Include="AllMasterPages\PublicMasterPage.Master" />
     <Content Include="AllPages\A.CoursesFolder\Courses.aspx" />
-    <Content Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx" />
     <Content Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx" />
-    <Content Include="AllPages\A.CoursesFolder\CoursesFull.aspx" />
-    <Content Include="AllPages\A.CoursesFolder\CoursesShort.aspx" />
     <Content Include="AllPages\B.MediaFolder\MediaPage.aspx" />
     <Content Include="AllPages\C.TrainingFolder\Training.aspx" />
     <Content Include="AllPages\D.ServicesFolder\ServicesPage.aspx" />
@@ -113,10 +110,12 @@
     <Content Include="AllPages\F.AdmissionsFolder\Admissions.aspx" />
     <Content Include="AllPages\F.AdmissionsFolder\AdmissionsForm.aspx" />
     <Content Include="AllPages\G.AboutUsFolder\AboutUs.aspx" />
-    <Content Include="AllPages\H.OnlineSignUp\css.css" />
-    <Content Include="AllPages\H.OnlineSignUp\js\index.js" />
-    <Content Include="AllPages\H.OnlineSignUp\OnlineSignUpFormPage.aspx" />
-    <Content Include="AllPages\H.OnlineSignUp\reception.jpg" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm2.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm3.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm4.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesForm5.aspx" />
+    <Content Include="AllPages\H.OnlineSignUpForm\CoursesFormFinal.aspx" />
     <Content Include="css\TableCss.css" />
     <Content Include="fonts\lato-bold-webfont.eot" />
     <Content Include="fonts\lato-bold-webfont.ttf" />
@@ -135,6 +134,7 @@
     <Content Include="fonts\lato-regular-webfont.woff" />
     <Content Include="fonts\lato-regular-webfont.woff2" />
     <Content Include="Global.asax" />
+    <Content Include="images\reception.jpg" />
     <Content Include="js\tablejs.js" />
     <Content Include="js\tablejsbs.js" />
     <Content Include="packages.config" />
@@ -309,33 +309,12 @@
     <Compile Include="AllPages\A.CoursesFolder\Courses.aspx.designer.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx.cs">
-      <DependentUpon>CoursesCustomised.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesCustomised.aspx.designer.cs">
-      <DependentUpon>CoursesCustomised.aspx</DependentUpon>
-    </Compile>
     <Compile Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx.cs">
       <DependentUpon>CoursesDetailed.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AllPages\A.CoursesFolder\CoursesDetailed.aspx.designer.cs">
       <DependentUpon>CoursesDetailed.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesFull.aspx.cs">
-      <DependentUpon>CoursesFull.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesFull.aspx.designer.cs">
-      <DependentUpon>CoursesFull.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesShort.aspx.cs">
-      <DependentUpon>CoursesShort.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="AllPages\A.CoursesFolder\CoursesShort.aspx.designer.cs">
-      <DependentUpon>CoursesShort.aspx</DependentUpon>
     </Compile>
     <Compile Include="AllPages\B.MediaFolder\MediaPage.aspx.cs">
       <DependentUpon>MediaPage.aspx</DependentUpon>
@@ -400,12 +379,47 @@
     <Compile Include="AllPages\G.AboutUsFolder\AboutUs.aspx.designer.cs">
       <DependentUpon>AboutUs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AllPages\H.OnlineSignUp\OnlineSignUpFormPage.aspx.cs">
-      <DependentUpon>OnlineSignUpFormPage.aspx</DependentUpon>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm.aspx.cs">
+      <DependentUpon>CoursesForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AllPages\H.OnlineSignUp\OnlineSignUpFormPage.aspx.designer.cs">
-      <DependentUpon>OnlineSignUpFormPage.aspx</DependentUpon>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm.aspx.designer.cs">
+      <DependentUpon>CoursesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm2.aspx.cs">
+      <DependentUpon>CoursesForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm2.aspx.designer.cs">
+      <DependentUpon>CoursesForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm3.aspx.cs">
+      <DependentUpon>CoursesForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm3.aspx.designer.cs">
+      <DependentUpon>CoursesForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm4.aspx.cs">
+      <DependentUpon>CoursesForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm4.aspx.designer.cs">
+      <DependentUpon>CoursesForm4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm5.aspx.cs">
+      <DependentUpon>CoursesForm5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesForm5.aspx.designer.cs">
+      <DependentUpon>CoursesForm5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesFormFinal.aspx.cs">
+      <DependentUpon>CoursesFormFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllPages\H.OnlineSignUpForm\CoursesFormFinal.aspx.designer.cs">
+      <DependentUpon>CoursesFormFinal.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="Global.asax.cs">
