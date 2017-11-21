@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetDataUsingDataContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEventDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getEventDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getEventDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getEventDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getClasses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getClasses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getClasses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getClassesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getcourseDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getcourseDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCourse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCourse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCourseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:getImage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCourses" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAvailableCourses_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAvailableCoursesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getSpecificClassesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSpecificClassesAvailableToSignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_InputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUp" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getAllCoursesAvailableToSignUp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getAllCoursesAvailableToSignUpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCarouselimages_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCarouselimages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCarouselimages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCarouselimagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getfirstcarouselimages_InputMessage">
+    <wsdl:part name="parameters" element="tns:getfirstcarouselimages" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getfirstcarouselimages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getfirstcarouselimagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFeaturedEventsData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedEventsData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFeaturedEventsData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedEventsDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFeaturedCoursesData_InputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedCoursesData" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getFeaturedCoursesData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getFeaturedCoursesDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendUpdateClassToCmsDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateClassToCmsDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendUpdateClassToCmsDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateClassToCmsDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendNewClassToCmsDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNewClassToCmsDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendNewClassToCmsDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNewClassToCmsDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendUpdateProgramToCmsDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateProgramToCmsDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendUpdateProgramToCmsDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendUpdateProgramToCmsDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendNewProgramToCmsDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendNewProgramToCmsDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SendNewProgramToCmsDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendNewProgramToCmsDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByNAME_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByNAME" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByNAME_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByNAMEResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByNRIC_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByNRIC" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByNRIC_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByNRICResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByAppID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByAppID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetOnlineApplicantByAppID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOnlineApplicantByAppIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertIntoEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntoEvents" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertIntoEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertIntoEventsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetDataUsingDataContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getEventDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getEventDetails" message="tns:IService1_getEventDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getEventDetailsResponse" message="tns:IService1_getEventDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getClasses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getClasses" message="tns:IService1_getClasses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getClassesResponse" message="tns:IService1_getClasses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getcourseDetails" message="tns:IService1_getcourseDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getcourseDetailsResponse" message="tns:IService1_getcourseDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCourse" message="tns:IService1_getCourse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCourseResponse" message="tns:IService1_getCourse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getImage" message="tns:IService1_getImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getImageResponse" message="tns:IService1_getImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAvailableCourses" message="tns:IService1_getAvailableCourses_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAvailableCoursesResponse" message="tns:IService1_getAvailableCourses_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" message="tns:IService1_getSpecificClassesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUpResponse" message="tns:IService1_getSpecificClassesAvailableToSignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" message="tns:IService1_getAllCoursesAvailableToSignUp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse" message="tns:IService1_getAllCoursesAvailableToSignUp_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCarouselimages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCarouselimages" message="tns:IService1_getCarouselimages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCarouselimagesResponse" message="tns:IService1_getCarouselimages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getfirstcarouselimages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getfirstcarouselimages" message="tns:IService1_getfirstcarouselimages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getfirstcarouselimagesResponse" message="tns:IService1_getfirstcarouselimages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedEventsData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFeaturedEventsData" message="tns:IService1_getFeaturedEventsData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFeaturedEventsDataResponse" message="tns:IService1_getFeaturedEventsData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedCoursesData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getFeaturedCoursesData" message="tns:IService1_getFeaturedCoursesData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getFeaturedCoursesDataResponse" message="tns:IService1_getFeaturedCoursesData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateClassToCmsDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendUpdateClassToCmsDB" message="tns:IService1_SendUpdateClassToCmsDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendUpdateClassToCmsDBResponse" message="tns:IService1_SendUpdateClassToCmsDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNewClassToCmsDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendNewClassToCmsDB" message="tns:IService1_SendNewClassToCmsDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendNewClassToCmsDBResponse" message="tns:IService1_SendNewClassToCmsDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateProgramToCmsDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendUpdateProgramToCmsDB" message="tns:IService1_SendUpdateProgramToCmsDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendUpdateProgramToCmsDBResponse" message="tns:IService1_SendUpdateProgramToCmsDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendNewProgramToCmsDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SendNewProgramToCmsDB" message="tns:IService1_SendNewProgramToCmsDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SendNewProgramToCmsDBResponse" message="tns:IService1_SendNewProgramToCmsDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByNAME">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByNAME" message="tns:IService1_GetOnlineApplicantByNAME_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByNAMEResponse" message="tns:IService1_GetOnlineApplicantByNAME_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByNRIC">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByNRIC" message="tns:IService1_GetOnlineApplicantByNRIC_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByNRICResponse" message="tns:IService1_GetOnlineApplicantByNRIC_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByAppID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByAppID" message="tns:IService1_GetOnlineApplicantByAppID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetOnlineApplicantByAppIDResponse" message="tns:IService1_GetOnlineApplicantByAppID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertIntoEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertIntoEvents" message="tns:IService1_InsertIntoEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertIntoEventsResponse" message="tns:IService1_InsertIntoEvents_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDataUsingDataContract">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetDataUsingDataContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEventDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getEventDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetData">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getClasses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getClasses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getcourseDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getcourseDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCourse">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCourse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getImage">
+      <soap:operation soapAction="http://tempuri.org/IService1/getImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAvailableCourses">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAvailableCourses" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getSpecificClassesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getSpecificClassesAvailableToSignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllCoursesAvailableToSignUp">
+      <soap:operation soapAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCarouselimages">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCarouselimages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getfirstcarouselimages">
+      <soap:operation soapAction="http://tempuri.org/IService1/getfirstcarouselimages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedEventsData">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFeaturedEventsData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFeaturedCoursesData">
+      <soap:operation soapAction="http://tempuri.org/IService1/getFeaturedCoursesData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateClassToCmsDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendUpdateClassToCmsDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewClassToCmsDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendNewClassToCmsDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendUpdateProgramToCmsDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendUpdateProgramToCmsDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendNewProgramToCmsDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/SendNewProgramToCmsDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByNAME">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOnlineApplicantByNAME" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByNRIC">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOnlineApplicantByNRIC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOnlineApplicantByAppID">
+      <soap:operation soapAction="http://tempuri.org/IService1/GetOnlineApplicantByAppID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertIntoEvents">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertIntoEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

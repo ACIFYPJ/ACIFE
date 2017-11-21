@@ -18,12 +18,12 @@ namespace BussinessLogicLayer.E.Events
         //    return dt;
         //}
 
-        public int InsertEventForm(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, DateTime RegistrationDate, int TnC, out string ex)
-        {
-            EventsDAL InsertEvents = new EventsDAL();
-            int result = InsertEvents.InsertIntoEvents(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
-            return result;
-        }
+        //public int InsertEventForm(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, DateTime RegistrationDate, int TnC, out string ex)
+        //{
+        //    EventsDAL InsertEvents = new EventsDAL();
+        //    int result = InsertEvents.InsertIntoEvents(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
+        //    return result;
+        //}
 
 
 

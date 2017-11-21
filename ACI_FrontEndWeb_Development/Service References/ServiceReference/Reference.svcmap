@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:12345/Service1.svc?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:80/Service1.svc?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service14.xsd" MetadataType="Schema" ID="3cf9d734-5a9a-4be5-8780-f5ed9b9165dc" SourceId="1" SourceUrl="http://localhost:12345/Service1.svc?xsd=xsd3" />
-    <MetadataFile FileName="Service141.xsd" MetadataType="Schema" ID="13601464-6e01-4422-b7ef-69dec35a5c81" SourceId="1" SourceUrl="http://localhost:12345/Service1.svc?xsd=xsd1" />
-    <MetadataFile FileName="Service142.xsd" MetadataType="Schema" ID="f0035600-3297-4c25-8091-528d01d5682c" SourceId="1" SourceUrl="http://localhost:12345/Service1.svc?xsd=xsd2" />
-    <MetadataFile FileName="Service11.wsdl" MetadataType="Wsdl" ID="019923e2-3029-431a-850d-3c888444d1a1" SourceId="1" SourceUrl="http://localhost:12345/Service1.svc?wsdl" />
-    <MetadataFile FileName="Service143.xsd" MetadataType="Schema" ID="8d6d960d-5bc7-4b70-9727-bfa5500fbe38" SourceId="1" SourceUrl="http://localhost:12345/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service1.xsd" MetadataType="Schema" ID="c78e46ad-503a-474d-92fe-9d4eb1b111df" SourceId="1" SourceUrl="http://localhost/Service1.svc?xsd=xsd2" />
+    <MetadataFile FileName="Service11.xsd" MetadataType="Schema" ID="b448ced1-cf4c-4a5d-a012-af5fe650f61a" SourceId="1" SourceUrl="http://localhost/Service1.svc?xsd=xsd3" />
+    <MetadataFile FileName="Service12.xsd" MetadataType="Schema" ID="60520311-f5c0-410c-a4bb-8afeaded890e" SourceId="1" SourceUrl="http://localhost/Service1.svc?xsd=xsd0" />
+    <MetadataFile FileName="Service13.xsd" MetadataType="Schema" ID="77300bd2-50cb-4036-8e05-c03dbd3983f7" SourceId="1" SourceUrl="http://localhost/Service1.svc?xsd=xsd1" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="78b7b2d7-ac87-4735-9b05-9403a27d56a5" SourceId="1" SourceUrl="http://localhost/Service1.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -144,7 +144,8 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
         {
             EventsBLL InsertIntoEvents = new EventsBLL();
             string ex;
-            int result = InsertIntoEvents.InsertEventForm(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
+            int result = client.InsertIntoEvents(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
+            //int result = InsertIntoEvents.InsertEventForm(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
 
             if (result >= 1)
             {

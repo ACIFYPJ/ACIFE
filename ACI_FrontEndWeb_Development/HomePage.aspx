@@ -57,12 +57,12 @@
                                 <div class="row ">                                  
                                     <div class="col-lg-12 service">
                                         <div class="service-content">
-                                            <h4><%#Eval("EventTitle")%> </h4>
-                                            <h5><%# Eval("EventStart") %></h5>
+                                            <h4><%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("EventTitle").ToString(),true)%> </h4>
+                                            <h5><%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("EventStart").ToString(),true) %></h5>
                                             <p>
-                                              <%# Eval("Description").ToString().PadRight(140).Substring(0,140).TrimEnd() + "..." %>
+                                              <%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("Description").ToString().PadRight(140).Substring(0,140).TrimEnd(),true) + "..." %>
                                             </p>
-                                            <strong><a href="/AllPages/E.EventsFolder/EventsDetailed.aspx?EventID=<%# Eval("EventID") %>">Read More</a></strong>
+                                            <strong><a href="/AllPages/E.EventsFolder/EventsDetailed.aspx?EventID=<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("EventID").ToString(),true) %>">Read More</a></strong>
                                         </div>
                                     </div>
                                 </div>
@@ -82,12 +82,12 @@
                                 <div class="row ">                                  
                                     <div class="col-lg-12 service">
                                         <div class="service-content">
-                                            <h4><%#Eval("CourseName")%> </h4>
-                                            <h5><%# Eval("CourseCode") %></h5>
+                                            <h4><%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseName").ToString(),true)%> </h4>
+                                            <h5><%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseCode").ToString(),true) %></h5>
                                             <p>
-                                              <%# Eval("Overview").ToString().PadRight(140).Substring(0,140).TrimEnd() + "..." %>
+                                              <%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("Overview").ToString().PadRight(140).Substring(0,140).TrimEnd(),true) + "..." %>
                                             </p>
-                                            <strong><a href="/AllPages/A.CoursesFolder/CoursesDetailed.aspx?CourseID=<%# Eval("CourseID") %>">Read More</a></strong>
+                                            <strong><a href="/AllPages/A.CoursesFolder/CoursesDetailed.aspx?CourseID=<%# System.Web.Security.AntiXss.AntiXssEncoder.HtmlEncode(Eval("CourseID").ToString(),true) %>">Read More</a></strong>
                                         </div>
                                     </div>
                                 </div>

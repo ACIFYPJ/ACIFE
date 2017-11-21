@@ -65,48 +65,48 @@ namespace DataAccessLayer.E.Events
         //}
 
 
-        public int InsertIntoEvents(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, DateTime RegistrationDate, int TnC, out string ex)
-        {
-            ex = " ";
-            StringBuilder sql;
-            SqlCommand sqlCmd;
-            int result;
-            result = 0;
-            sql = new StringBuilder();
-            sql.AppendLine("INSERT INTO aci_eventregistration(EventID, Title, Name, DateOfBirth,Nationality,Handphone,Email,HighestEducation,CurrentEmployment,ReferralSource,SignupReason,AgreeTermsConditions,RegistrationDate,NRIC)");
-            sql.AppendLine("VALUES (@EventID, @Title, @Name, @DateOfBirth,@Nationality,@Handphone,@Email,@HighestEducation,@CurrentEmployment,@ReferralSource,@SignupReason,@AgreeTermsConditions,@RegistrationDate,@NRIC)");
-            SqlConnection conn = GetConnection();
-            conn.Open();
-            try
-            {
-                sqlCmd = new SqlCommand(sql.ToString(), conn);
-                sqlCmd.Parameters.AddWithValue("@EventID", EventID);
-                sqlCmd.Parameters.AddWithValue("@Title", EventTitle);
-                sqlCmd.Parameters.AddWithValue("@Name", FullName);
-                sqlCmd.Parameters.AddWithValue("@NRIC", NRIC);
-                sqlCmd.Parameters.AddWithValue("@Email", Email);
-                sqlCmd.Parameters.AddWithValue("@Handphone", Handphone);
-                sqlCmd.Parameters.AddWithValue("@ReferralSource", ReferralSource);
-                sqlCmd.Parameters.AddWithValue("@SignupReason", reason);
-                sqlCmd.Parameters.AddWithValue("@DateOfBirth", DOB);
-                sqlCmd.Parameters.AddWithValue("@Nationality", nationality);
-                sqlCmd.Parameters.AddWithValue("@HighestEducation", HighestEducation);
-                sqlCmd.Parameters.AddWithValue("@CurrentEmployment", CurrentEmployment);
-                sqlCmd.Parameters.AddWithValue("@RegistrationDate", RegistrationDate);
-                sqlCmd.Parameters.AddWithValue("@AgreeTermsConditions", TnC);
-                result = sqlCmd.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                ex = e.Message;
-            }
-            finally
-            {
-                conn.Close();
-            }
+        //public int InsertIntoEvents(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, DateTime RegistrationDate, int TnC, out string ex)
+        //{
+        //    ex = " ";
+        //    StringBuilder sql;
+        //    SqlCommand sqlCmd;
+        //    int result;
+        //    result = 0;
+        //    sql = new StringBuilder();
+        //    sql.AppendLine("INSERT INTO aci_eventregistration(EventID, Title, Name, DateOfBirth,Nationality,Handphone,Email,HighestEducation,CurrentEmployment,ReferralSource,SignupReason,AgreeTermsConditions,RegistrationDate,NRIC)");
+        //    sql.AppendLine("VALUES (@EventID, @Title, @Name, @DateOfBirth,@Nationality,@Handphone,@Email,@HighestEducation,@CurrentEmployment,@ReferralSource,@SignupReason,@AgreeTermsConditions,@RegistrationDate,@NRIC)");
+        //    SqlConnection conn = GetConnection();
+        //    conn.Open();
+        //    try
+        //    {
+        //        sqlCmd = new SqlCommand(sql.ToString(), conn);
+        //        sqlCmd.Parameters.AddWithValue("@EventID", EventID);
+        //        sqlCmd.Parameters.AddWithValue("@Title", EventTitle);
+        //        sqlCmd.Parameters.AddWithValue("@Name", FullName);
+        //        sqlCmd.Parameters.AddWithValue("@NRIC", NRIC);
+        //        sqlCmd.Parameters.AddWithValue("@Email", Email);
+        //        sqlCmd.Parameters.AddWithValue("@Handphone", Handphone);
+        //        sqlCmd.Parameters.AddWithValue("@ReferralSource", ReferralSource);
+        //        sqlCmd.Parameters.AddWithValue("@SignupReason", reason);
+        //        sqlCmd.Parameters.AddWithValue("@DateOfBirth", DOB);
+        //        sqlCmd.Parameters.AddWithValue("@Nationality", nationality);
+        //        sqlCmd.Parameters.AddWithValue("@HighestEducation", HighestEducation);
+        //        sqlCmd.Parameters.AddWithValue("@CurrentEmployment", CurrentEmployment);
+        //        sqlCmd.Parameters.AddWithValue("@RegistrationDate", RegistrationDate);
+        //        sqlCmd.Parameters.AddWithValue("@AgreeTermsConditions", TnC);
+        //        result = sqlCmd.ExecuteNonQuery();
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        ex = e.Message;
+        //    }
+        //    finally
+        //    {
+        //        conn.Close();
+        //    }
 
-            return result;
-        }
+        //    return result;
+        //}
     }
 
 }

@@ -74,6 +74,167 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getAllCoursesAvailableToSignUp", ReplyAction="http://tempuri.org/IService1/getAllCoursesAvailableToSignUpResponse")]
         System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCarouselimages", ReplyAction="http://tempuri.org/IService1/getCarouselimagesResponse")]
+        string getCarouselimages();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getCarouselimages", ReplyAction="http://tempuri.org/IService1/getCarouselimagesResponse")]
+        System.Threading.Tasks.Task<string> getCarouselimagesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getfirstcarouselimages", ReplyAction="http://tempuri.org/IService1/getfirstcarouselimagesResponse")]
+        string getfirstcarouselimages();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getfirstcarouselimages", ReplyAction="http://tempuri.org/IService1/getfirstcarouselimagesResponse")]
+        System.Threading.Tasks.Task<string> getfirstcarouselimagesAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFeaturedEventsData", ReplyAction="http://tempuri.org/IService1/getFeaturedEventsDataResponse")]
+        string getFeaturedEventsData();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFeaturedEventsData", ReplyAction="http://tempuri.org/IService1/getFeaturedEventsDataResponse")]
+        System.Threading.Tasks.Task<string> getFeaturedEventsDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFeaturedCoursesData", ReplyAction="http://tempuri.org/IService1/getFeaturedCoursesDataResponse")]
+        string getFeaturedCoursesData();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/getFeaturedCoursesData", ReplyAction="http://tempuri.org/IService1/getFeaturedCoursesDataResponse")]
+        System.Threading.Tasks.Task<string> getFeaturedCoursesDataAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendUpdateClassToCmsDB", ReplyAction="http://tempuri.org/IService1/SendUpdateClassToCmsDBResponse")]
+        void SendUpdateClassToCmsDB(int ClassID, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendUpdateClassToCmsDB", ReplyAction="http://tempuri.org/IService1/SendUpdateClassToCmsDBResponse")]
+        System.Threading.Tasks.Task SendUpdateClassToCmsDBAsync(int ClassID, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendNewClassToCmsDB", ReplyAction="http://tempuri.org/IService1/SendNewClassToCmsDBResponse")]
+        void SendNewClassToCmsDB(int ClassID, int CourseID, System.DateTime PublishDate, string ProjectCode, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendNewClassToCmsDB", ReplyAction="http://tempuri.org/IService1/SendNewClassToCmsDBResponse")]
+        System.Threading.Tasks.Task SendNewClassToCmsDBAsync(int ClassID, int CourseID, System.DateTime PublishDate, string ProjectCode, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendUpdateProgramToCmsDB", ReplyAction="http://tempuri.org/IService1/SendUpdateProgramToCmsDBResponse")]
+        string SendUpdateProgramToCmsDB(string title, int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendUpdateProgramToCmsDB", ReplyAction="http://tempuri.org/IService1/SendUpdateProgramToCmsDBResponse")]
+        System.Threading.Tasks.Task<string> SendUpdateProgramToCmsDBAsync(string title, int courseID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendNewProgramToCmsDB", ReplyAction="http://tempuri.org/IService1/SendNewProgramToCmsDBResponse")]
+        string SendNewProgramToCmsDB(int courseID, string title, string allmodulestitle, decimal coursefee, string courseCode, int courseVersion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/SendNewProgramToCmsDB", ReplyAction="http://tempuri.org/IService1/SendNewProgramToCmsDBResponse")]
+        System.Threading.Tasks.Task<string> SendNewProgramToCmsDBAsync(int courseID, string title, string allmodulestitle, decimal coursefee, string courseCode, int courseVersion);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByNAME", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByNAMEResponse")]
+        string GetOnlineApplicantByNAME(string SearchString);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByNAME", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByNAMEResponse")]
+        System.Threading.Tasks.Task<string> GetOnlineApplicantByNAMEAsync(string SearchString);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByNRIC", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByNRICResponse")]
+        string GetOnlineApplicantByNRIC(string SearchString);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByNRIC", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByNRICResponse")]
+        System.Threading.Tasks.Task<string> GetOnlineApplicantByNRICAsync(string SearchString);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByAppID", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByAppIDResponse")]
+        string GetOnlineApplicantByAppID(string ApplicantID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetOnlineApplicantByAppID", ReplyAction="http://tempuri.org/IService1/GetOnlineApplicantByAppIDResponse")]
+        System.Threading.Tasks.Task<string> GetOnlineApplicantByAppIDAsync(string ApplicantID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertIntoEvents", ReplyAction="http://tempuri.org/IService1/InsertIntoEventsResponse")]
+        ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse InsertIntoEvents(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request);
+        
+        // CODEGEN: Generating message contract since the operation has multiple return values.
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertIntoEvents", ReplyAction="http://tempuri.org/IService1/InsertIntoEventsResponse")]
+        System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertIntoEvents", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class InsertIntoEventsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int EventID;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string EventTitle;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=2)]
+        public string FullName;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=3)]
+        public string NRIC;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=4)]
+        public string Email;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=5)]
+        public int Handphone;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=6)]
+        public string ReferralSource;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=7)]
+        public string reason;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=8)]
+        public System.DateTime DOB;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=9)]
+        public string nationality;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=10)]
+        public string HighestEducation;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=11)]
+        public string CurrentEmployment;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=12)]
+        public System.DateTime RegistrationDate;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=13)]
+        public int TnC;
+        
+        public InsertIntoEventsRequest() {
+        }
+        
+        public InsertIntoEventsRequest(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, System.DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, System.DateTime RegistrationDate, int TnC) {
+            this.EventID = EventID;
+            this.EventTitle = EventTitle;
+            this.FullName = FullName;
+            this.NRIC = NRIC;
+            this.Email = Email;
+            this.Handphone = Handphone;
+            this.ReferralSource = ReferralSource;
+            this.reason = reason;
+            this.DOB = DOB;
+            this.nationality = nationality;
+            this.HighestEducation = HighestEducation;
+            this.CurrentEmployment = CurrentEmployment;
+            this.RegistrationDate = RegistrationDate;
+            this.TnC = TnC;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="InsertIntoEventsResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+    public partial class InsertIntoEventsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+        public int InsertIntoEventsResult;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=1)]
+        public string ex;
+        
+        public InsertIntoEventsResponse() {
+        }
+        
+        public InsertIntoEventsResponse(int InsertIntoEventsResult, string ex) {
+            this.InsertIntoEventsResult = InsertIntoEventsResult;
+            this.ex = ex;
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -181,6 +342,124 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         public System.Threading.Tasks.Task<string> getAllCoursesAvailableToSignUpAsync() {
             return base.Channel.getAllCoursesAvailableToSignUpAsync();
+        }
+        
+        public string getCarouselimages() {
+            return base.Channel.getCarouselimages();
+        }
+        
+        public System.Threading.Tasks.Task<string> getCarouselimagesAsync() {
+            return base.Channel.getCarouselimagesAsync();
+        }
+        
+        public string getfirstcarouselimages() {
+            return base.Channel.getfirstcarouselimages();
+        }
+        
+        public System.Threading.Tasks.Task<string> getfirstcarouselimagesAsync() {
+            return base.Channel.getfirstcarouselimagesAsync();
+        }
+        
+        public string getFeaturedEventsData() {
+            return base.Channel.getFeaturedEventsData();
+        }
+        
+        public System.Threading.Tasks.Task<string> getFeaturedEventsDataAsync() {
+            return base.Channel.getFeaturedEventsDataAsync();
+        }
+        
+        public string getFeaturedCoursesData() {
+            return base.Channel.getFeaturedCoursesData();
+        }
+        
+        public System.Threading.Tasks.Task<string> getFeaturedCoursesDataAsync() {
+            return base.Channel.getFeaturedCoursesDataAsync();
+        }
+        
+        public void SendUpdateClassToCmsDB(int ClassID, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate) {
+            base.Channel.SendUpdateClassToCmsDB(ClassID, StartDate, EndDate, RegStartDate, RegEndDate);
+        }
+        
+        public System.Threading.Tasks.Task SendUpdateClassToCmsDBAsync(int ClassID, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate) {
+            return base.Channel.SendUpdateClassToCmsDBAsync(ClassID, StartDate, EndDate, RegStartDate, RegEndDate);
+        }
+        
+        public void SendNewClassToCmsDB(int ClassID, int CourseID, System.DateTime PublishDate, string ProjectCode, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate) {
+            base.Channel.SendNewClassToCmsDB(ClassID, CourseID, PublishDate, ProjectCode, StartDate, EndDate, RegStartDate, RegEndDate);
+        }
+        
+        public System.Threading.Tasks.Task SendNewClassToCmsDBAsync(int ClassID, int CourseID, System.DateTime PublishDate, string ProjectCode, System.DateTime StartDate, System.DateTime EndDate, System.DateTime RegStartDate, System.DateTime RegEndDate) {
+            return base.Channel.SendNewClassToCmsDBAsync(ClassID, CourseID, PublishDate, ProjectCode, StartDate, EndDate, RegStartDate, RegEndDate);
+        }
+        
+        public string SendUpdateProgramToCmsDB(string title, int courseID) {
+            return base.Channel.SendUpdateProgramToCmsDB(title, courseID);
+        }
+        
+        public System.Threading.Tasks.Task<string> SendUpdateProgramToCmsDBAsync(string title, int courseID) {
+            return base.Channel.SendUpdateProgramToCmsDBAsync(title, courseID);
+        }
+        
+        public string SendNewProgramToCmsDB(int courseID, string title, string allmodulestitle, decimal coursefee, string courseCode, int courseVersion) {
+            return base.Channel.SendNewProgramToCmsDB(courseID, title, allmodulestitle, coursefee, courseCode, courseVersion);
+        }
+        
+        public System.Threading.Tasks.Task<string> SendNewProgramToCmsDBAsync(int courseID, string title, string allmodulestitle, decimal coursefee, string courseCode, int courseVersion) {
+            return base.Channel.SendNewProgramToCmsDBAsync(courseID, title, allmodulestitle, coursefee, courseCode, courseVersion);
+        }
+        
+        public string GetOnlineApplicantByNAME(string SearchString) {
+            return base.Channel.GetOnlineApplicantByNAME(SearchString);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetOnlineApplicantByNAMEAsync(string SearchString) {
+            return base.Channel.GetOnlineApplicantByNAMEAsync(SearchString);
+        }
+        
+        public string GetOnlineApplicantByNRIC(string SearchString) {
+            return base.Channel.GetOnlineApplicantByNRIC(SearchString);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetOnlineApplicantByNRICAsync(string SearchString) {
+            return base.Channel.GetOnlineApplicantByNRICAsync(SearchString);
+        }
+        
+        public string GetOnlineApplicantByAppID(string ApplicantID) {
+            return base.Channel.GetOnlineApplicantByAppID(ApplicantID);
+        }
+        
+        public System.Threading.Tasks.Task<string> GetOnlineApplicantByAppIDAsync(string ApplicantID) {
+            return base.Channel.GetOnlineApplicantByAppIDAsync(ApplicantID);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse ACI_FrontEndWeb_Development.ServiceReference.IService1.InsertIntoEvents(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request) {
+            return base.Channel.InsertIntoEvents(request);
+        }
+        
+        public int InsertIntoEvents(int EventID, string EventTitle, string FullName, string NRIC, string Email, int Handphone, string ReferralSource, string reason, System.DateTime DOB, string nationality, string HighestEducation, string CurrentEmployment, System.DateTime RegistrationDate, int TnC, out string ex) {
+            ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest inValue = new ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest();
+            inValue.EventID = EventID;
+            inValue.EventTitle = EventTitle;
+            inValue.FullName = FullName;
+            inValue.NRIC = NRIC;
+            inValue.Email = Email;
+            inValue.Handphone = Handphone;
+            inValue.ReferralSource = ReferralSource;
+            inValue.reason = reason;
+            inValue.DOB = DOB;
+            inValue.nationality = nationality;
+            inValue.HighestEducation = HighestEducation;
+            inValue.CurrentEmployment = CurrentEmployment;
+            inValue.RegistrationDate = RegistrationDate;
+            inValue.TnC = TnC;
+            ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse retVal = ((ACI_FrontEndWeb_Development.ServiceReference.IService1)(this)).InsertIntoEvents(inValue);
+            ex = retVal.ex;
+            return retVal.InsertIntoEventsResult;
+        }
+        
+        public System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request) {
+            return base.Channel.InsertIntoEventsAsync(request);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
 
     public partial class Events : System.Web.UI.Page
     {
-        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
 
         protected void Page_Load(object sender, EventArgs e)
         {

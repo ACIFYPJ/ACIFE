@@ -148,17 +148,20 @@
     <Content Include="Scripts\jquery-3.1.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.1.1.min.map" />
     <Content Include="ShowImage.ashx" />
-    <None Include="Service References\ServiceReference\Service11.wsdl" />
-    <None Include="Service References\ServiceReference\Service14.xsd">
+    <Content Include="Service References\ServiceReference\ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReference\Service1.wsdl" />
+    <None Include="Service References\ServiceReference\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service141.xsd">
+    <None Include="Service References\ServiceReference\Service11.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service142.xsd">
+    <None Include="Service References\ServiceReference\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServiceReference\Service143.xsd">
+    <None Include="Service References\ServiceReference\Service13.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">

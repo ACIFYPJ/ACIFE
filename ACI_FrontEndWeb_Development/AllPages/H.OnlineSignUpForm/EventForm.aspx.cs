@@ -11,7 +11,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
 {
     public partial class EventForm : System.Web.UI.Page
     {
-        ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
+        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
         private static int EventID;
         private static string EventTitle;
         protected void Page_Load(object sender, EventArgs e)
@@ -136,7 +136,8 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
         {
             EventsBLL InsertIntoEvents = new EventsBLL();
             string ex;
-            int result = InsertIntoEvents.InsertEventForm(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
+            int result = client.InsertIntoEvents(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
+            //int result = InsertIntoEvents.InsertEventForm(EventID, EventTitle, FullName, NRIC, Email, Handphone, ReferralSource, reason, DOB, nationality, HighestEducation, CurrentEmployment, RegistrationDate, TnC, out ex);
 
             if (result >= 1)
             {

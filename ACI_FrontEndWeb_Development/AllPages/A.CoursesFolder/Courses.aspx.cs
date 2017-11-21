@@ -30,7 +30,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.A.CoursesFolder
             dtdip = BLL.getDipCourse();
             dtshort = BLL.getShortCourse();
             dtspecdip = BLL.getSpecDipCourse();
-            dtcus = BLL.getSpecDipCourse();
+            dtcus = BLL.getCusCourse();
 
             certRPT.DataSource = dtcert;
             certRPT.DataBind();

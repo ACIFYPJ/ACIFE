@@ -55,8 +55,9 @@ namespace ACI_FrontEndWeb_Development.AllPages.E.EventsFolder
         {
             Session["eid"] = int.Parse(Request.QueryString["EventID"]);
             Session["eventTitle"] = eventTitle.InnerText.ToString();
-            Response.Redirect("EventsForm.aspx");
-            Response.Redirect("../H.OnlineSignUpForm/EventForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"]) + "&EventTitle=" + eventTitle.InnerText.ToString());
+
+            Response.Redirect("../H.OnlineSignUpForm/EventForm.aspx");
+           // Response.Redirect("../H.OnlineSignUpForm/EventForm.aspx?EventID=" + int.Parse(Request.QueryString["EventID"]) + "&EventTitle=" + eventTitle.InnerText.ToString());
         }
     }
 }
