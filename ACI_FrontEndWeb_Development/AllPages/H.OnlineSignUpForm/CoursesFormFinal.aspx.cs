@@ -11,6 +11,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
 {
     public partial class CoursesFormFinal : System.Web.UI.Page
     {
+        ServiceReference.Service1Client client = new ServiceReference.Service1Client();
         OnlineSignUp BLL = new OnlineSignUp();
 
         //personal particulars (Contact details)
@@ -160,7 +161,8 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
         }
         private void StoreToDB()
         {
-            string message = BLL.InsertCourseApplication(FullName, ContactNumber, Email, Address, PostalCode, NRIC, Nationality, NRICtype, Gender, Race, DOB, ProgramID, ClassCode, Sponsorship, HighestEdu, SpokenEnglish, SpokenChinese, SpokenOthers, WrittenEnglish, WrittenChinese, WrittenOthers, gettoknow, Companyname, Employmentstatus, Position, Salary, JobStartDate, JobEndDate, CurrentEmployment, ProgramTitle);
+            string message = client.InsertCourseApplication(FullName, ContactNumber, Email, Address, PostalCode, NRIC, Nationality, NRICtype, Gender, Race, DOB, ProgramID, ClassCode, Sponsorship, HighestEdu, SpokenEnglish, SpokenChinese, SpokenOthers, WrittenEnglish, WrittenChinese, WrittenOthers, gettoknow, Companyname, Employmentstatus, Position, Salary, JobStartDate, JobEndDate, CurrentEmployment, ProgramTitle);
+            //string message = BLL.InsertCourseApplication(FullName, ContactNumber, Email, Address, PostalCode, NRIC, Nationality, NRICtype, Gender, Race, DOB, ProgramID, ClassCode, Sponsorship, HighestEdu, SpokenEnglish, SpokenChinese, SpokenOthers, WrittenEnglish, WrittenChinese, WrittenOthers, gettoknow, Companyname, Employmentstatus, Position, Salary, JobStartDate, JobEndDate, CurrentEmployment, ProgramTitle);
           // lblcoursetitle.Text = message;
         }
 
