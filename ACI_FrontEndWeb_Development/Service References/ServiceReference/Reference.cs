@@ -147,6 +147,72 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         // CODEGEN: Generating message contract since the operation has multiple return values.
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertIntoEvents", ReplyAction="http://tempuri.org/IService1/InsertIntoEventsResponse")]
         System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCourseApplication", ReplyAction="http://tempuri.org/IService1/InsertCourseApplicationResponse")]
+        string InsertCourseApplication(
+                    string FullName, 
+                    string ContactNumber, 
+                    string Email, 
+                    string Address, 
+                    string PostalCode, 
+                    string NRIC, 
+                    string Nationality, 
+                    string NRICtype, 
+                    string Gender, 
+                    string Race, 
+                    string DOB, 
+                    string ProgramID, 
+                    string ClassCode, 
+                    string Sponsorship, 
+                    string HighestEdu, 
+                    string SpokenEnglish, 
+                    string SpokenChinese, 
+                    string SpokenOthers, 
+                    string WrittenEnglish, 
+                    string WrittenChinese, 
+                    string WrittenOthers, 
+                    string gettoknow, 
+                    string Companyname, 
+                    string Employmentstatus, 
+                    string Position, 
+                    string Salary, 
+                    string JobStartDate, 
+                    string JobEndDate, 
+                    string CurrentEmployment, 
+                    string ProgramTitle);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/InsertCourseApplication", ReplyAction="http://tempuri.org/IService1/InsertCourseApplicationResponse")]
+        System.Threading.Tasks.Task<string> InsertCourseApplicationAsync(
+                    string FullName, 
+                    string ContactNumber, 
+                    string Email, 
+                    string Address, 
+                    string PostalCode, 
+                    string NRIC, 
+                    string Nationality, 
+                    string NRICtype, 
+                    string Gender, 
+                    string Race, 
+                    string DOB, 
+                    string ProgramID, 
+                    string ClassCode, 
+                    string Sponsorship, 
+                    string HighestEdu, 
+                    string SpokenEnglish, 
+                    string SpokenChinese, 
+                    string SpokenOthers, 
+                    string WrittenEnglish, 
+                    string WrittenChinese, 
+                    string WrittenOthers, 
+                    string gettoknow, 
+                    string Companyname, 
+                    string Employmentstatus, 
+                    string Position, 
+                    string Salary, 
+                    string JobStartDate, 
+                    string JobEndDate, 
+                    string CurrentEmployment, 
+                    string ProgramTitle);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -460,6 +526,74 @@ namespace ACI_FrontEndWeb_Development.ServiceReference {
         
         public System.Threading.Tasks.Task<ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsResponse> InsertIntoEventsAsync(ACI_FrontEndWeb_Development.ServiceReference.InsertIntoEventsRequest request) {
             return base.Channel.InsertIntoEventsAsync(request);
+        }
+        
+        public string InsertCourseApplication(
+                    string FullName, 
+                    string ContactNumber, 
+                    string Email, 
+                    string Address, 
+                    string PostalCode, 
+                    string NRIC, 
+                    string Nationality, 
+                    string NRICtype, 
+                    string Gender, 
+                    string Race, 
+                    string DOB, 
+                    string ProgramID, 
+                    string ClassCode, 
+                    string Sponsorship, 
+                    string HighestEdu, 
+                    string SpokenEnglish, 
+                    string SpokenChinese, 
+                    string SpokenOthers, 
+                    string WrittenEnglish, 
+                    string WrittenChinese, 
+                    string WrittenOthers, 
+                    string gettoknow, 
+                    string Companyname, 
+                    string Employmentstatus, 
+                    string Position, 
+                    string Salary, 
+                    string JobStartDate, 
+                    string JobEndDate, 
+                    string CurrentEmployment, 
+                    string ProgramTitle) {
+            return base.Channel.InsertCourseApplication(FullName, ContactNumber, Email, Address, PostalCode, NRIC, Nationality, NRICtype, Gender, Race, DOB, ProgramID, ClassCode, Sponsorship, HighestEdu, SpokenEnglish, SpokenChinese, SpokenOthers, WrittenEnglish, WrittenChinese, WrittenOthers, gettoknow, Companyname, Employmentstatus, Position, Salary, JobStartDate, JobEndDate, CurrentEmployment, ProgramTitle);
+        }
+        
+        public System.Threading.Tasks.Task<string> InsertCourseApplicationAsync(
+                    string FullName, 
+                    string ContactNumber, 
+                    string Email, 
+                    string Address, 
+                    string PostalCode, 
+                    string NRIC, 
+                    string Nationality, 
+                    string NRICtype, 
+                    string Gender, 
+                    string Race, 
+                    string DOB, 
+                    string ProgramID, 
+                    string ClassCode, 
+                    string Sponsorship, 
+                    string HighestEdu, 
+                    string SpokenEnglish, 
+                    string SpokenChinese, 
+                    string SpokenOthers, 
+                    string WrittenEnglish, 
+                    string WrittenChinese, 
+                    string WrittenOthers, 
+                    string gettoknow, 
+                    string Companyname, 
+                    string Employmentstatus, 
+                    string Position, 
+                    string Salary, 
+                    string JobStartDate, 
+                    string JobEndDate, 
+                    string CurrentEmployment, 
+                    string ProgramTitle) {
+            return base.Channel.InsertCourseApplicationAsync(FullName, ContactNumber, Email, Address, PostalCode, NRIC, Nationality, NRICtype, Gender, Race, DOB, ProgramID, ClassCode, Sponsorship, HighestEdu, SpokenEnglish, SpokenChinese, SpokenOthers, WrittenEnglish, WrittenChinese, WrittenOthers, gettoknow, Companyname, Employmentstatus, Position, Salary, JobStartDate, JobEndDate, CurrentEmployment, ProgramTitle);
         }
     }
 }

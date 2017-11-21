@@ -140,6 +140,12 @@
   <wsdl:message name="IService1_InsertIntoEvents_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertIntoEventsResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_InsertCourseApplication_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCourseApplication" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertCourseApplication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertCourseApplicationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
@@ -228,6 +234,10 @@
     <wsdl:operation name="InsertIntoEvents">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertIntoEvents" message="tns:IService1_InsertIntoEvents_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertIntoEventsResponse" message="tns:IService1_InsertIntoEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCourseApplication">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertCourseApplication" message="tns:IService1_InsertCourseApplication_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertCourseApplicationResponse" message="tns:IService1_InsertCourseApplication_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -423,6 +433,15 @@
     </wsdl:operation>
     <wsdl:operation name="InsertIntoEvents">
       <soap:operation soapAction="http://tempuri.org/IService1/InsertIntoEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCourseApplication">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertCourseApplication" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
