@@ -166,7 +166,7 @@ namespace ACI_FrontEndWeb_Development.AllPages.H.OnlineSignUpForm
 
         protected void BtnHome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CoursesForm.aspx");
+            Response.Redirect("../../HomePage.aspx");
         }
     }
 }
